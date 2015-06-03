@@ -1,0 +1,424 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>绩效管理基本理论 | LaiTao&#39;s blog</title>
+  <meta name="author" content="赖 韬">
+  
+  <meta name="description" content="管理咨询 管理顾问 绩效管理 数据分析 R perl LaTex">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="绩效管理基本理论"/>
+  <meta property="og:site_name" content="LaiTao&#39;s blog"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="http://zipperary.com/atom.xml" title="LaiTao&#39;s blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//libs.baidu.com/jquery/1.8.0/jquery.min.js"></script>
+</head>
+
+
+<body>
+  <header id="header" class="inner">
+<div class="alignleft">
+  <h1><a href="/">LaiTao&#39;s blog</a></h1>
+  <h2><a href="/">管理不在于知，而在于行！</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">归档</a></li>
+    
+      <li><a href="/about">关于</a></li>
+    
+      <li><a href="/tools">工具</a></li>
+    
+	<li> <a href="/atom.xml">RSS</a> </li>
+<li> <a title="把这个链接拖到你的Chrome收藏夹工具栏中" href='javascript:(function() {
+	function c() {
+		var e = document.createElement("link");
+		e.setAttribute("type", "text/css");
+		e.setAttribute("rel", "stylesheet");
+		e.setAttribute("href", f);
+		e.setAttribute("class", l);
+		document.body.appendChild(e)
+	}
+ 
+	function h() {
+		var e = document.getElementsByClassName(l);
+		for (var t = 0; t < e.length; t++) {
+			document.body.removeChild(e[t])
+		}
+	}
+ 
+	function p() {
+		var e = document.createElement("div");
+		e.setAttribute("class", a);
+		document.body.appendChild(e);
+		setTimeout(function() {
+			document.body.removeChild(e)
+		}, 100)
+	}
+ 
+	function d(e) {
+		return {
+			height : e.offsetHeight,
+			width : e.offsetWidth
+		}
+	}
+ 
+	function v(i) {
+		var s = d(i);
+		return s.height > e && s.height < n && s.width > t && s.width < r
+	}
+ 
+	function m(e) {
+		var t = e;
+		var n = 0;
+		while (!!t) {
+			n += t.offsetTop;
+			t = t.offsetParent
+		}
+		return n
+	}
+ 
+	function g() {
+		var e = document.documentElement;
+		if (!!window.innerWidth) {
+			return window.innerHeight
+		} else if (e && !isNaN(e.clientHeight)) {
+			return e.clientHeight
+		}
+		return 0
+	}
+ 
+	function y() {
+		if (window.pageYOffset) {
+			return window.pageYOffset
+		}
+		return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+	}
+ 
+	function E(e) {
+		var t = m(e);
+		return t >= w && t <= b + w
+	}
+ 
+	function S() {
+		var e = document.createElement("audio");
+		e.setAttribute("class", l);
+		e.src = i;
+		e.loop = false;
+		e.addEventListener("canplay", function() {
+			setTimeout(function() {
+				x(k)
+			}, 500);
+			setTimeout(function() {
+				N();
+				p();
+				for (var e = 0; e < O.length; e++) {
+					T(O[e])
+				}
+			}, 15500)
+		}, true);
+		e.addEventListener("ended", function() {
+			N();
+			h()
+		}, true);
+		e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+		document.body.appendChild(e);
+		e.play()
+	}
+ 
+	function x(e) {
+		e.className += " " + s + " " + o
+	}
+ 
+	function T(e) {
+		e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+	}
+ 
+	function N() {
+		var e = document.getElementsByClassName(s);
+		var t = new RegExp("\\b" + s + "\\b");
+		for (var n = 0; n < e.length; ) {
+			e[n].className = e[n].className.replace(t, "")
+		}
+	}
+ 
+	var e = 30;
+	var t = 30;
+	var n = 350;
+	var r = 350;
+	var i = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3";
+	var s = "mw-harlem_shake_me";
+	var o = "im_first";
+	var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+	var a = "mw-strobe_light";
+	var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+	var l = "mw_added_css";
+	var b = g();
+	var w = y();
+	var C = document.getElementsByTagName("*");
+	var k = null;
+	for (var L = 0; L < C.length; L++) {
+		var A = C[L];
+		if (v(A)) {
+			if (E(A)) {
+				k = A;
+				break
+			}
+		}
+	}
+	if (A === null) {
+		console.warn("Could not find a node of the right size. Please try a different page.");
+		return
+	}
+	c();
+	S();
+	var O = [];
+	for (var L = 0; L < C.length; L++) {
+		var A = C[L];
+		if (v(A)) {
+			O.push(A)
+		}
+	}
+})()    '>High一下</a> </li>
+
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-05-31T13:32:52.000Z"><a href="/2015/05/31/jxjc/">2015-05-31</a></time>
+      
+      
+  
+    <h1 class="title">绩效管理基本理论</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>从2007年毕业到进入管理咨询行业（医疗行业的管理咨询），再到成长为咨询师独立负责项目已有8年。一直以来忙着于学习新知识与积累经验，因项目而在全国各处奔波，眨眼间已到而立之年，想着是时候写点总结或随笔，记录点知识或分享点经验，因此建立了这个Blog，而绩效管理基本理论作为了我的第一编博文。</p>
+<a id="more"></a>
+<h2 id="一、绩效的定义">一、绩效的定义</h2><p><strong>绩效</strong>：组织的业绩（对外成果）和效率（内部成果） </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是我认为对绩效一词最简单最精确的描述。</span><br></pre></td></tr></table></figure>
+<h2 id="二、需使用到的心理学理论">二、需使用到的心理学理论</h2><h3 id="2-1双因素理论"><a href="http://baike.baidu.com/view/20694.htm" target="_blank" rel="external">2.1双因素理论</a></h3><ul>
+<li><strong>保健因素</strong></li>
+<li><strong>激励因素</strong> </li>
+</ul>
+<p><img src="/img/jx/01-1twojlys.png" width="450"><br><img src="/img/jx/01-2qjll.png" width="450"></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">提高执行力的三要素：意愿、技能、承诺</span><br></pre></td></tr></table></figure>
+<p>固定工资属于保健因素，绩效工资属于激励因素，如果保健因素得不到满足，员工容易产生不满情绪，再多的激励因素也产生不了激励作用。  </p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">一般固定工资占员工收入的<span class="number">35</span><span class="preprocessor">%</span>至<span class="number">50</span><span class="preprocessor">%</span>较为合理。</span><br><span class="line">固定工资与绩效工资比重失衡的例子</span><br><span class="line"><span class="number">1</span>、社区卫生院的绩效工资分基础性绩效与<span class="number">30</span><span class="preprocessor">%</span>奖励性绩效，基础性绩效是变向的固定工资，导致绩效工资比重</span><br><span class="line">过小，所经激励作用很弱。</span><br><span class="line"><span class="number">2</span>、有些民营综合性基层医院，固定工资比重很小，员工不满情绪多、冲击医院文化，奖金很高但员工积极性</span><br><span class="line">却不高、没有归属感，离职率高，更留不住骨干。</span><br></pre></td></tr></table></figure>
+<h3 id="2-2公平理论"><a href="http://baike.baidu.com/view/46978.htm" target="_blank" rel="external">2.2公平理论</a></h3><ul>
+<li><strong>纵向比较</strong>：现在报酬与付出的比值与过去报酬与付出的比值进行比较  <ul>
+<li>实施绩效改革的单位则表现为：改革前后的比较  </li>
+</ul>
+</li>
+<li><strong>横向比较</strong>：自已报酬与付出的比值与他人报酬与付出的比值进行比较   </li>
+</ul>
+<p>公平的内涵：规则起点平等、机会均等、结果公平合理<br>影响公平性判断的要素：个人主观判断、个人所持有的公平标准  </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">平等与公平是有差异的</span><br><span class="line">法律面前人人平等，说明平等是不会因人而异的。</span><br><span class="line">说到公平，大家总是说：“我认为这不公平”。说明公平是受个人主观意识决定的，是要体现出差异的，在绩效</span><br><span class="line">工资分配过程中，付出多的人认为自已的报酬要比付出少的人多才是公平的。</span><br><span class="line">绩效改革关键成功要点：改变原有个人所持的公平标准，尽量统一员工对公平标准的认识，或减少差异</span><br></pre></td></tr></table></figure>
+<h3 id="2-3前景理论"><a href="http://baike.baidu.com/view/1205091.htm" target="_blank" rel="external">2.3前景理论</a></h3><p>这是个风险下决策的描述性模型 </p>
+<ul>
+<li><strong>确定效应</strong>（面对确定的获得，不愿冒风险）   </li>
+<li><strong>反射效应</strong>（面对失去，更加倾向于冒险）  </li>
+<li><strong>损失规避</strong>（面对损失的痛苦感要大大超过面对获得的快乐感）  </li>
+<li><strong>参照依赖</strong>（多数人对得失的判断往往根据参照点决定，在1与2的选择中，大部分人会选择前者）<br>  1、其他人一年挣6万元你年收入7万元<br>  2、其他人一年挣9万元你年收入8万元</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">提出绩效设计原则：</span><br><span class="line">尊重历史，增量改革</span><br><span class="line">管理者与员工要分类设计</span><br></pre></td></tr></table></figure>
+<h2 id="三、">三、</h2>
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/绩效管理/">绩效管理</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/医疗行业/">医疗行业</a>, <a href="/tags/管理咨询/">管理咨询</a>, <a href="/tags/管理基础/">管理基础</a>, <a href="/tags/绩效管理/">绩效管理</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more"></span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=3326447" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+ <nav id="pagination" >
+    
+    
+    <div class="clearfix"></div>
+</nav>
+
+
+
+<section id="comment">
+
+<!-- Duoshuo Comment BEGIN -->
+	<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"zippera"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- Duoshuo Comment END -->  
+
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:github.com/tianyv/tianyv.github.io">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/绩效管理/">绩效管理</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  <div class="widget tag">
+<h3 class="title">简介</h3>
+<ul class="entry">
+<li>博主：赖韬</li>
+<li>网名：aef25u</li>
+<li>行业：管理顾问、数据分析师</li>
+<li>单位：广州市**管理研究院</li>
+<li>想交友的朋友请联系我！</li>
+<li>QQ 号：215113227</li>
+<font color="blue">Email：laitaot@126.com</font>
+</ul>
+</div>
+
+
+
+  <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=0&uid=1586279270&verifier=0c2cdcf8&dpc=1"></iframe>
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><section>
+Theme of <a href="https://github.com/zippera/lightum">Lightum</a>, Improved from <a href="https://github.com/hexojs/hexo-theme-light">Light</a>, by <a href="/">zippera</a> 
+</section>
+<div class="clearfix"></div>
+</footer>
+  <script src="//libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body>
+</html>
+
+
+<a href="https://github.com/zippera" target="_blank"><img style="position: absolute; top: 0; left: 0; border: 0;" src="/img/forkme_left_green_007200.png" alt="Fork me on GitHub"></a>
