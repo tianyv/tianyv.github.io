@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Moose入门基础 | LaiTao&#39;s blog</title>
+  <meta name="author" content="赖 韬">
+  
+  <meta name="description" content="管理咨询 管理顾问 绩效管理 数据分析 R perl LaTex">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Moose入门基础"/>
+  <meta property="og:site_name" content="LaiTao&#39;s blog"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="/atom.xml" title="LaiTao&#39;s blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//libs.baidu.com/jquery/1.8.0/jquery.min.js"></script>
+</head>
+
+
+<body>
+  <header id="header" class="inner">
+<div class="alignleft">
+  <h1><a href="/">LaiTao&#39;s blog</a></h1>
+  <h2><a href="/">管理不在于知，而在于行！</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">归档</a></li>
+    
+      <li><a href="/about">关于</a></li>
+    
+      <li><a href="/tools">工具</a></li>
+    
+	<li> <a href="/atom.xml">RSS</a> </li>
+<li> <a title="把这个链接拖到你的Chrome收藏夹工具栏中" href='javascript:(function() {
+	function c() {
+		var e = document.createElement("link");
+		e.setAttribute("type", "text/css");
+		e.setAttribute("rel", "stylesheet");
+		e.setAttribute("href", f);
+		e.setAttribute("class", l);
+		document.body.appendChild(e)
+	}
+ 
+	function h() {
+		var e = document.getElementsByClassName(l);
+		for (var t = 0; t < e.length; t++) {
+			document.body.removeChild(e[t])
+		}
+	}
+ 
+	function p() {
+		var e = document.createElement("div");
+		e.setAttribute("class", a);
+		document.body.appendChild(e);
+		setTimeout(function() {
+			document.body.removeChild(e)
+		}, 100)
+	}
+ 
+	function d(e) {
+		return {
+			height : e.offsetHeight,
+			width : e.offsetWidth
+		}
+	}
+ 
+	function v(i) {
+		var s = d(i);
+		return s.height > e && s.height < n && s.width > t && s.width < r
+	}
+ 
+	function m(e) {
+		var t = e;
+		var n = 0;
+		while (!!t) {
+			n += t.offsetTop;
+			t = t.offsetParent
+		}
+		return n
+	}
+ 
+	function g() {
+		var e = document.documentElement;
+		if (!!window.innerWidth) {
+			return window.innerHeight
+		} else if (e && !isNaN(e.clientHeight)) {
+			return e.clientHeight
+		}
+		return 0
+	}
+ 
+	function y() {
+		if (window.pageYOffset) {
+			return window.pageYOffset
+		}
+		return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+	}
+ 
+	function E(e) {
+		var t = m(e);
+		return t >= w && t <= b + w
+	}
+ 
+	function S() {
+		var e = document.createElement("audio");
+		e.setAttribute("class", l);
+		e.src = i;
+		e.loop = false;
+		e.addEventListener("canplay", function() {
+			setTimeout(function() {
+				x(k)
+			}, 500);
+			setTimeout(function() {
+				N();
+				p();
+				for (var e = 0; e < O.length; e++) {
+					T(O[e])
+				}
+			}, 15500)
+		}, true);
+		e.addEventListener("ended", function() {
+			N();
+			h()
+		}, true);
+		e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+		document.body.appendChild(e);
+		e.play()
+	}
+ 
+	function x(e) {
+		e.className += " " + s + " " + o
+	}
+ 
+	function T(e) {
+		e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+	}
+ 
+	function N() {
+		var e = document.getElementsByClassName(s);
+		var t = new RegExp("\\b" + s + "\\b");
+		for (var n = 0; n < e.length; ) {
+			e[n].className = e[n].className.replace(t, "")
+		}
+	}
+ 
+	var e = 30;
+	var t = 30;
+	var n = 350;
+	var r = 350;
+	var i = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3";
+	var s = "mw-harlem_shake_me";
+	var o = "im_first";
+	var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+	var a = "mw-strobe_light";
+	var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+	var l = "mw_added_css";
+	var b = g();
+	var w = y();
+	var C = document.getElementsByTagName("*");
+	var k = null;
+	for (var L = 0; L < C.length; L++) {
+		var A = C[L];
+		if (v(A)) {
+			if (E(A)) {
+				k = A;
+				break
+			}
+		}
+	}
+	if (A === null) {
+		console.warn("Could not find a node of the right size. Please try a different page.");
+		return
+	}
+	c();
+	S();
+	var O = [];
+	for (var L = 0; L < C.length; L++) {
+		var A = C[L];
+		if (v(A)) {
+			O.push(A)
+		}
+	}
+})()    '>High一下</a> </li>
+
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-06-15T15:17:07.000Z"><a href="/2015/06/15/moosejc/">2015-06-15</a></time>
+      
+      
+  
+    <h1 class="title">Moose入门基础</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>本文最早发布在chinaunix.net论坛及本人chinaunix.net博客。<br><a href="http://bbs.chinaunix.net/thread-4148453-1-1.html" target="_blank" rel="external">论坛 http://bbs.chinaunix.net/thread-4148453-1-1.html</a><br><a href="http://blog.chinaunix.net/uid-22674875-id-4383545.html" target="_blank" rel="external">博客 http://blog.chinaunix.net/uid-22674875-id-4383545.html</a><br><a id="more"></a></p>
+<p>如下网上找到关于Moose使用的一个例子，刚接触感觉像天书，网上google一番，看了些资料终于搞明白了。现将整个理解过程简要列一下，希望对大家学Moose有帮助。</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">package</span> Point;</span><br><span class="line">    <span class="keyword">use</span> Moose;</span><br><span class="line"></span><br><span class="line">    has <span class="string">'x'</span> =&gt; ( <span class="string">isa =&gt;</span> <span class="string">'Int'</span>, <span class="string">is =&gt;</span> <span class="string">'rw'</span> );</span><br><span class="line">    has <span class="string">'y'</span> =&gt; ( <span class="string">isa =&gt;</span> <span class="string">'Int'</span>, <span class="string">is =&gt;</span> <span class="string">'rw'</span> );</span><br><span class="line"></span><br><span class="line">    <span class="keyword">use</span> Moose::Util::TypeConstraints;</span><br><span class="line">    subtype <span class="string">'Point::OrHashRef'</span>, as <span class="string">'Point'</span>;</span><br><span class="line">    coerce <span class="string">'Point::OrHashRef'</span>,</span><br><span class="line">      from <span class="string">'HashRef'</span>,</span><br><span class="line">      via &#123; Point-&gt;new( <span class="string">x =&gt;</span> <span class="variable">$_</span>-&gt;&#123;x&#125;, <span class="string">y =&gt;</span> <span class="variable">$_</span>-&gt;&#123;y&#125; ) &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="sub"><span class="keyword">sub</span> distance &#123;</span></span><br><span class="line">        <span class="keyword">my</span> <span class="variable">$start</span> = <span class="keyword">shift</span>;</span><br><span class="line">        <span class="keyword">my</span> <span class="variable">$end</span>   = <span class="keyword">shift</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">my</span> <span class="variable">$dx</span> = <span class="variable">$end</span>-&gt;<span class="keyword">x</span> - <span class="variable">$start</span>-&gt;<span class="keyword">x</span>;</span><br><span class="line">        <span class="keyword">my</span> <span class="variable">$dy</span> = <span class="variable">$end</span>-&gt;<span class="keyword">y</span> - <span class="variable">$start</span>-&gt;<span class="keyword">y</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">sqrt</span>( <span class="variable">$dx</span> * <span class="variable">$dx</span> + <span class="variable">$dy</span> * <span class="variable">$dy</span> );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">package</span> Line;</span><br><span class="line">    <span class="keyword">use</span> Moose;</span><br><span class="line"></span><br><span class="line">    <span class="comment"># And the same for end</span></span><br><span class="line">    has [ <span class="string">'start'</span>, <span class="string">'end'</span> ] =&gt; (</span><br><span class="line">        <span class="string">isa      =&gt;</span> <span class="string">'Point::OrHashRef'</span>,</span><br><span class="line">        <span class="string">coerce   =&gt;</span> <span class="number">1</span>,</span><br><span class="line">        <span class="string">is       =&gt;</span> <span class="string">'rw'</span>,</span><br><span class="line">        <span class="string">required =&gt;</span> <span class="number">1</span>,</span><br><span class="line">        <span class="string">trigger  =&gt;</span> <span class="sub"><span class="keyword">sub</span> &#123;</span></span><br><span class="line">            <span class="variable">$_</span>[<span class="number">0</span>]-&gt;_clear_length();</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    has <span class="string">'length'</span> =&gt; (</span><br><span class="line">        <span class="string">isa     =&gt;</span> <span class="string">'Num'</span>,</span><br><span class="line">        <span class="string">is      =&gt;</span> <span class="string">'ro'</span>,</span><br><span class="line">        <span class="string">clearer =&gt;</span> <span class="string">'_clear_length'</span>,</span><br><span class="line">        <span class="string">lazy    =&gt;</span> <span class="number">1</span>,</span><br><span class="line">        <span class="string">default =&gt;</span> <span class="sub"><span class="keyword">sub</span> &#123;</span></span><br><span class="line">            <span class="keyword">return</span> <span class="variable">$_</span>[<span class="number">0</span>]-&gt;start-&gt;distance( <span class="variable">$_</span>[<span class="number">0</span>]-&gt;end );</span><br><span class="line">        &#125;</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> Test::More;</span><br><span class="line"></span><br><span class="line"><span class="keyword">my</span> <span class="variable">$line</span> = Line-&gt;new(</span><br><span class="line">    <span class="string">start =&gt;</span> &#123; <span class="string">x           =&gt;</span> <span class="number">1</span>, <span class="string">y =&gt;</span> <span class="number">1</span> &#125;,</span><br><span class="line">    <span class="string">end   =&gt;</span> Point-&gt;new( <span class="string">x =&gt;</span> <span class="number">2</span>, <span class="string">y =&gt;</span> <span class="number">2</span> )</span><br><span class="line">);</span><br><span class="line">isa_ok <span class="variable">$line</span>, <span class="string">"Line"</span>;</span><br><span class="line">isa_ok <span class="variable">$line</span>-&gt;start, <span class="string">"Point"</span>;</span><br><span class="line">isa_ok <span class="variable">$line</span>-&gt;end,   <span class="string">"Point"</span>;</span><br><span class="line">like <span class="variable">$line</span>-&gt;<span class="keyword">length</span>,  <span class="regexp">qr/^1.4142135623731/</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$line</span>-&gt;end( &#123; <span class="string">x =&gt;</span> <span class="number">3</span>, <span class="string">y =&gt;</span> <span class="number">3</span> &#125; );</span><br><span class="line">like <span class="variable">$line</span>-&gt;<span class="keyword">length</span>, <span class="regexp">qr/^2.82842712474619/</span>, <span class="string">"length is rederived"</span>;</span><br><span class="line"></span><br><span class="line">done_testing;</span><br></pre></td></tr></table></figure>
+<p>一、弄懂distance函数是如何实现计算两点间的距离的。<br>1.1将代码简化为：</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Point;</span><br><span class="line"><span class="keyword">use</span> Moose;</span><br><span class="line"></span><br><span class="line">has <span class="string">'x'</span> =&gt; ( <span class="string">isa =&gt;</span> <span class="string">'Int'</span>, <span class="string">is =&gt;</span> <span class="string">'rw'</span> );</span><br><span class="line">has <span class="string">'y'</span> =&gt; ( <span class="string">isa =&gt;</span> <span class="string">'Int'</span>, <span class="string">is =&gt;</span> <span class="string">'rw'</span> );</span><br><span class="line"></span><br><span class="line"><span class="sub"><span class="keyword">sub</span> distance &#123;</span></span><br><span class="line">    <span class="keyword">my</span> ( <span class="variable">$_</span>, <span class="variable">$p</span> ) = <span class="variable">@_</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#对应例子$p1-&gt;distance($p2);</span></span><br><span class="line">    <span class="comment">#$_-&gt;&#123;x&#125;即$p1 = Point-&gt;new( x =&gt; 4, ... );</span></span><br><span class="line">    <span class="comment">#$p-&gt;&#123;x&#125;即$p2 = Point-&gt;new( x =&gt; 1, ... );</span></span><br><span class="line">    <span class="keyword">my</span> ( <span class="variable">$dx</span>, <span class="variable">$dy</span> ) = ( <span class="variable">$_</span>-&gt;&#123;x&#125; - <span class="variable">$p</span>-&gt;&#123;x&#125;, <span class="variable">$_</span>-&gt;&#123;y&#125; - <span class="variable">$p</span>-&gt;&#123;y&#125; );</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">sqrt</span>( <span class="variable">$dx</span> * <span class="variable">$dx</span> + <span class="variable">$dy</span> * <span class="variable">$dy</span> );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> main;</span><br><span class="line"><span class="keyword">my</span> <span class="variable">$p1</span> = Point-&gt;new( <span class="string">x =&gt;</span> <span class="number">4</span>, <span class="string">y =&gt;</span> <span class="number">5</span> );</span><br><span class="line"><span class="keyword">my</span> <span class="variable">$p2</span> = Point-&gt;new( <span class="string">x =&gt;</span> <span class="number">1</span>, <span class="string">y =&gt;</span> <span class="number">1</span> );</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">'p1与p2相距距离为：'</span>;</span><br><span class="line"><span class="keyword">print</span> <span class="variable">$p1</span>-&gt;distance(<span class="variable">$p2</span>);</span><br></pre></td></tr></table></figure>
+<p>1.2将Moose实现的代码转化为传统OO辅助理解（同为网上找到的例子）：</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="sub"><span class="keyword">sub</span> Point::new &#123;</span></span><br><span class="line">    <span class="keyword">my</span> ( <span class="variable">$class</span>, <span class="variable">$x</span>, <span class="variable">$y</span> ) = <span class="variable">@_</span>;</span><br><span class="line">    <span class="keyword">bless</span> [ <span class="variable">$x</span>, <span class="variable">$y</span> ], <span class="variable">$class</span>;    <span class="comment"># Implicit return</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="sub"><span class="keyword">sub</span> Point::distance &#123;</span></span><br><span class="line">    <span class="keyword">my</span> ( <span class="variable">$self</span>, <span class="variable">$from</span> ) = <span class="variable">@_</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#对应例子$p1-&gt;distance($p2);</span></span><br><span class="line">    <span class="comment">#对于传统OO的实现，$self代表$p1,$self[0]即“bless [$x, $y],</span></span><br><span class="line">    <span class="comment">#$class”中的$x这不难理解了吧，同理$from即传入的$p2。</span></span><br><span class="line">    <span class="keyword">my</span> ( <span class="variable">$dx</span>, <span class="variable">$dy</span> ) = ( <span class="variable">$self</span>[<span class="number">0</span>] - <span class="variable">$from</span>[<span class="number">0</span>], <span class="variable">$self</span>[<span class="number">1</span>] - <span class="variable">$from</span>[<span class="number">1</span>] );</span><br><span class="line">    <span class="keyword">sqrt</span>( <span class="variable">$dx</span> * <span class="variable">$dx</span> + <span class="variable">$dy</span> * <span class="variable">$dy</span> );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">my</span> <span class="variable">$p1</span> = Point-&gt;new( <span class="number">4</span>, <span class="number">5</span> );</span><br><span class="line"><span class="keyword">my</span> <span class="variable">$p2</span> = Point-&gt;new( <span class="number">1</span>, <span class="number">1</span> );</span><br><span class="line"><span class="keyword">print</span> <span class="variable">$p1</span>-&gt;distance(<span class="variable">$p2</span>);</span><br></pre></td></tr></table></figure>
+<p>至此，Line类中length默认值$<em>[0]-&gt;start-&gt;distance( $</em>[0]-&gt;end )即为上例\$p1-&gt;distance(\$p2)。</p>
+<p>2.1弄明白Moose是如何实现自定义类型，并如何强制实现类型转换的。</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Point;</span><br><span class="line"><span class="keyword">use</span> Moose;</span><br><span class="line">has <span class="string">'x'</span> =&gt; ( <span class="string">isa =&gt;</span> <span class="string">'Int'</span>, <span class="string">is =&gt;</span> <span class="string">'rw'</span> );</span><br><span class="line">has <span class="string">'y'</span> =&gt; ( <span class="string">isa =&gt;</span> <span class="string">'Int'</span>, <span class="string">is =&gt;</span> <span class="string">'rw'</span> );</span><br><span class="line"></span><br><span class="line"><span class="comment">#对于new(start =&gt; &#123; x =&gt; 1, y =&gt; 1 &#125;,...)函数，我们传给第一个属性的值是个hash引用</span></span><br><span class="line"><span class="comment">#但测试输出ok 1 - The object isa Point，转变为了Point对象类型。</span></span><br><span class="line"><span class="keyword">use</span> Moose::Util::TypeConstraints;</span><br><span class="line"></span><br><span class="line"><span class="comment">#自定义既可以是Point对象类型又可以是HashRef的数据类型，并命名为Point::OrHashRef</span></span><br><span class="line">subtype <span class="string">'Point::OrHashRef'</span>, as <span class="string">'Point'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">#将hash引用($hash=&#123; x =&gt; 1, y =&gt; 1 &#125;)强制转换成Point对象，通过Point-&gt;new()来实现，$_-&gt;&#123;x&#125;即$hash-&gt;&#123;x&#125;</span></span><br><span class="line">coerce <span class="string">'Point::OrHashRef'</span>,</span><br><span class="line">  from <span class="string">'HashRef'</span>,</span><br><span class="line">  via &#123; Point-&gt;new( <span class="string">x =&gt;</span> <span class="variable">$_</span>-&gt;&#123;x&#125;, <span class="string">y =&gt;</span> <span class="variable">$_</span>-&gt;&#123;y&#125; ) &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> Line;</span><br><span class="line"><span class="keyword">use</span> Moose;</span><br><span class="line"></span><br><span class="line">has [ <span class="string">'start'</span>, <span class="string">'end'</span> ] =&gt; (</span><br><span class="line">    <span class="string">isa    =&gt;</span> <span class="string">'Point::OrHashRef'</span>,</span><br><span class="line">    <span class="string">coerce =&gt;</span> <span class="number">1</span>,</span><br><span class="line">    <span class="string">is     =&gt;</span> <span class="string">'rw'</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> main;</span><br><span class="line"><span class="keyword">use</span> Test::More;</span><br><span class="line"><span class="keyword">my</span> <span class="variable">$line</span> = Line-&gt;new(</span><br><span class="line">    <span class="string">start =&gt;</span> &#123; <span class="string">x           =&gt;</span> <span class="number">1</span>, <span class="string">y =&gt;</span> <span class="number">1</span> &#125;,</span><br><span class="line">    <span class="string">end   =&gt;</span> Point-&gt;new( <span class="string">x =&gt;</span> <span class="number">2</span>, <span class="string">y =&gt;</span> <span class="number">2</span> )</span><br><span class="line">);</span><br><span class="line">isa_ok <span class="variable">$line</span>-&gt;start, <span class="string">"Point"</span>;</span><br><span class="line">isa_ok <span class="variable">$line</span>-&gt;end,   <span class="string">"Point"</span>;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/perl/">perl</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/Moose/">Moose</a>, <a href="/tags/perl/">perl</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more"></span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=3326447" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+ <nav id="pagination" >
+    
+    
+    <a href="/2015/06/15/schwarzian/" class="alignright next" >下一页</a>
+    
+    <div class="clearfix"></div>
+</nav>
+
+
+
+<section id="comment">
+
+<!-- Duoshuo Comment BEGIN -->
+	<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"zippera"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- Duoshuo Comment END -->  
+
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:github.com/tianyv/tianyv.github.io">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/perl/">perl</a><small>3</small></li>
+  
+    <li><a href="/categories/绩效管理/">绩效管理</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+
+  <div class="widget tag">
+<h3 class="title">简介</h3>
+<ul class="entry">
+<li>博主：赖韬</li>
+<li>网名：aef25u</li>
+<li>行业：管理顾问、数据分析师</li>
+<li>单位：广州市**管理研究院</li>
+<li>想交友的朋友请联系我！</li>
+<li>QQ 号：215113227</li>
+<font color="blue">Email：laitaot@126.com</font>
+</ul>
+</div>
+
+
+
+  <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=1&uid=5623904311&verifier=43d9cf0c&dpc=1"></iframe>
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><section>
+Theme of <a href="https://github.com/zippera/lightum">Lightum</a>, Improved from <a href="https://github.com/hexojs/hexo-theme-light">Light</a>, by <a href="/">zippera</a> 
+</section>
+<div class="clearfix"></div>
+</footer>
+  <script src="//libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body>
+</html>
+
+
+<a href="https://github.com/tianyv" target="_blank"><img style="position: absolute; top: 0; left: 0; border: 0;" src="/img/forkme_left_green_007200.png" alt="Fork me on GitHub"></a>

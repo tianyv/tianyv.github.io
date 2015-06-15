@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档 | LaiTao&#39;s blog</title>
+  <title>Schwartzian转换 | LaiTao&#39;s blog</title>
   <meta name="author" content="赖 韬">
   
   <meta name="description" content="管理咨询 管理顾问 绩效管理 数据分析 R perl LaTex">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="Schwartzian转换"/>
   <meta property="og:site_name" content="LaiTao&#39;s blog"/>
 
   
@@ -202,73 +202,111 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title">归档</h2>
-
-
-  <div class="archive">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
     
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2015-06-15T15:17:07.000Z"><a href="/2015/06/15/moosejc/">2015-06-15</a></time>
-            
-              <h1 class="title"><a href="/2015/06/15/moosejc/">Moose入门基础</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2015-06-15T15:01:31.000Z"><a href="/2015/06/15/schwarzian/">2015-06-15</a></time>
-            
-              <h1 class="title"><a href="/2015/06/15/schwarzian/">Schwartzian转换</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2015-06-15T14:17:05.000Z"><a href="/2015/06/15/perlintro/">2015-06-15</a></time>
-            
-              <h1 class="title"><a href="/2015/06/15/perlintro/">Love perl</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2015-06-03T14:05:32.000Z"><a href="/2015/06/03/jxfp/">2015-06-03</a></time>
-            
-              <h1 class="title"><a href="/2015/06/03/jxfp/">绩效分配模式</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2015-05-31T13:32:52.000Z"><a href="/2015/05/31/jxjc/">2015-05-31</a></time>
-            
-              <h1 class="title"><a href="/2015/05/31/jxjc/">绩效管理基本理论</a></h1>
-            
-          </header>
-        </div>
-      </article>
+      <img src="">
     
   </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-06-15T15:01:31.000Z"><a href="/2015/06/15/schwarzian/">2015-06-15</a></time>
+      
+      
+  
+    <h1 class="title">Schwartzian转换</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Schwartzian：map sort map组合应用</p>
+<a id="more"></a>
+<h2 id="Schwartzian_Example">Schwartzian Example</h2><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> Modern::Perl;</span><br><span class="line"><span class="keyword">use</span> Data::Dumper;</span><br><span class="line"></span><br><span class="line"><span class="keyword">my</span> <span class="variable">@arr</span> = <span class="string">qw(a b c c 2 2)</span>;</span><br><span class="line"><span class="keyword">my</span> <span class="variable">%count</span>;</span><br><span class="line"><span class="comment">#元素第1次出现的下标</span></span><br><span class="line"><span class="keyword">my</span> <span class="variable">%hash</span> = <span class="keyword">map</span> &#123; <span class="variable">$arr</span>[<span class="variable">$_</span>], <span class="variable">$_</span> &#125; <span class="number">0</span> .. <span class="variable">$#arr</span>;</span><br><span class="line"><span class="keyword">print</span> Dumper( \<span class="variable">%hash</span> );</span><br><span class="line"><span class="comment">#Schwartzian</span></span><br><span class="line"><span class="keyword">my</span> <span class="variable">@dates</span> = <span class="string">qw(2001/1/1  2001/07/04  1999/12/25)</span>;</span><br><span class="line"><span class="keyword">my</span> <span class="variable">@sorted</span> = <span class="keyword">map</span> &#123; <span class="variable">$_</span>-&gt;[<span class="number">0</span>] &#125;</span><br><span class="line">  <span class="keyword">sort</span> &#123; <span class="variable">$a</span>-&gt;[<span class="number">1</span>] &lt;=&gt; <span class="variable">$b</span>-&gt;[<span class="number">1</span>] </span><br><span class="line">      <span class="keyword">or</span> <span class="variable">$a</span>-&gt;[<span class="number">2</span>] &lt;=&gt; <span class="variable">$b</span>-&gt;[<span class="number">2</span>] </span><br><span class="line">      <span class="keyword">or</span> <span class="variable">$a</span>-&gt;[<span class="number">3</span>] &lt;=&gt; <span class="variable">$b</span>-&gt;[<span class="number">3</span>] &#125;</span><br><span class="line"><span class="keyword">map</span> &#123; [ <span class="variable">$_</span>, ( <span class="keyword">split</span> <span class="regexp">/\//</span>, <span class="variable">$_</span> ) ] &#125; <span class="variable">@dates</span>;</span><br><span class="line"><span class="keyword">print</span> Dumper( \<span class="variable">@sorted</span> );</span><br></pre></td></tr></table></figure>
+<p><img src="/img/perl/map.png" width="450"></p>
+<p>注：上例为本人系列教程<strong>《Perl Simple 教程》</strong>其中一页幻灯片内容。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/perl/">perl</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/map/">map</a>, <a href="/tags/perl/">perl</a>, <a href="/tags/schwarzian/">schwarzian</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more"></span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=3326447" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+ <nav id="pagination" >
+    
+    <a href="/2015/06/15/moosejc/" class="alignleft prev" >上一页</a>
+    
+    
+    <a href="/2015/06/15/perlintro/" class="alignright next" >下一页</a>
+    
+    <div class="clearfix"></div>
+</nav>
+
+
+
+<section id="comment">
+
+<!-- Duoshuo Comment BEGIN -->
+	<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"zippera"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- Duoshuo Comment END -->  
+
+  
+</section>
+
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
