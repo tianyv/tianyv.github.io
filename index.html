@@ -269,111 +269,6 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2015-07-16T08:34:51.000Z"><a href="/2015/07/16/xufb/">2015-07-16</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2015/07/16/xufb/">xufb</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <a id="more"></a>
-<p>  <script type="text/javascript" src="svgMap/js/lib/jquery.js"></script><br>  <script type="text/javascript" src="svgMap/js/lib/raphael-min.js"></script><br>  <script type="text/javascript" src="svgMap/js/res/chinaMapConfig.js"></script><br>  <script type="text/javascript" src="svgMap/js/map.js"></script><br>  <style type="text/css"><br>/<em> base </em>/<br>html{background:#fff;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,p,form,fieldset,legend,input,textarea,select,button,th,td,div{margin:0; padding:0}button,input,select,textarea{font:12px/1.5 tahoma,Helvetica,arial,\5b8b\4f53}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}th{text-align:inherit}fieldset,img{border:0}iframe{display:block}ol,ul,li{list-style:none}del{text-decoration:line-through}ins,a{text-decoration:none}a:focus{outline:none}h1,h2,h3,h4,h5,h6{font-size:100%}.clear{clear:both}.clearfix:after{content:”.”;display:block;height:0;font-size:0;clear:both;visibility:hidden}.clearfix{zoom:1}<br>/<em> base </em>/</p>
-<p>body{font:12px/1.5 “Lucida Grande”,”Lucida Sans Unicode”, Tahoma, SimSun,Helvetica,sans-serif; color:#2E313A;}<br>.wrap{ width:900px; margin:0 auto; border-left:1px solid #DDD; border-right:1px solid #DDD;}<br>a{color:#0e4279; -moz-transition:color 0.3s ease 0s;}<br>a:hover{color:#5B636A;}<br>h1{ padding:20px 0 0 20px; font-size:24px; line-height:50px;}<br>h2{ margin-top:30px; padding-left:10px; background-color: #ddd; font-size:14px; line-height:30px;}</p>
-<p>/<em> 提示自定义 </em>/<br>.mapTip{display:none; position:absolute; padding:8px; background:#fff; border: 1px solid #aaa; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;<br>-webkit-box-shadow: 0 5px 10px rgba(0,0,0,.3);<br>box-shadow: 0 5px 10px rgba(0,0,0,.3);<br>    font-size:12px; font-family:Tahoma; color:#333;}</p>
-<p>.mapTip .arrow,<br>.mapTip .arrowMask{ position: absolute; width: 0; height: 0; border-color: transparent; border-style: solid;}<br>.mapTip .arrow{ bottom: -7px; left: 50%; margin-left: -7px; border-width: 7px; border-top-color: #999; border-top-color: rgba(0,0,0,.25); border-bottom-width: 0;}<br>.mapTip .arrowMask{bottom: 1px; border-width: 6px; margin-left: -6px; border-top-color: #fff; border-bottom-width: 0;}</p>
-<p>.mapInfo i{ display:inline-block; width:15px; height:15px; margin-top:5px; line-height:15px; font-style:normal; background:#aeaeae; color:#fff; font-size:11px; font-family: Tahoma; -webkit-border-radius:15px; border-radius:15px; text-align:center<br>}<br>.mapInfo i.active{background:#E27F21;}<br>.mapInfo span{ padding:0 5px 0 3px;}<br>.mapInfo b{ font-weight:normal; color:#2770B5}<br></style><br>  <script type="text/javascript"><br>$(function(){<br>    var data = {<br>    “guangdong”:{“value”:”10+9家”,”index”:”1”,”stateInitColor”:”0”},<br>    “ningxia”:{“value”:”5家”,”index”:”2”,”stateInitColor”:”0”},<br>    “sichuan”:{“value”:”3+1家”,”index”:”3”,”stateInitColor”:”0”},<br>    “hunan”:{“value”:”2家”,”index”:”4”,”stateInitColor”:”2”},<br>    “jiangxi”:{“value”:”2家”,”index”:”5”,”stateInitColor”:”2”},<br>    “zhejiang”:{“value”:”1+1家”,”index”:”6”,”stateInitColor”:”2”},<br>    “fujian”:{“value”:”1家”,”index”:”7”,”stateInitColor”:”2”},<br>    “guizhou”:{“value”:”1家”,”index”:”8”,”stateInitColor”:”2”},<br>    “hubei”:{“value”:”1家”,”index”:”9”,”stateInitColor”:”2”},<br>    “neimenggu”:{“value”:”1家”,”index”:”10”,”stateInitColor”:”2”},<br>    “shanxi”:{“value”:”1家”,”index”:”11”,”stateInitColor”:”2”},<br>    “yunnan”:{“value”:”1家”,”index”:”12”,”stateInitColor”:”2”},<br>    “anhui”:{“value”:”0”,”index”:”13”,”stateInitColor”:”7”},<br>    “shandong”:{“value”:”0”,”index”:”14”,”stateInitColor”:”7”},<br>    “jiangsu”:{“value”:”0”,”index”:”15”,”stateInitColor”:”7”},<br>    “liaoning”:{“value”:”0”,”index”:”16”,”stateInitColor”:”7”},<br>    “beijing”:{“value”:”0”,”index”:”17”,”stateInitColor”:”7”},<br>    “jilin”:{“value”:”0”,”index”:”18”,”stateInitColor”:”7”},<br>    “hainan”:{“value”:”0”,”index”:”19”,”stateInitColor”:”7”},<br>    “shaanxi”:{“value”:”0”,”index”:”20”,”stateInitColor”:”7”},<br>    “hebei”:{“value”:”0”,”index”:”21”,”stateInitColor”:”7”},<br>    “guangxi”:{“value”:”0”,”index”:”22”,”stateInitColor”:”7”},<br>    “tianjin”:{“value”:”0”,”index”:”23”,”stateInitColor”:”7”},<br>    “gansu”:{“value”:”0”,”index”:”24”,”stateInitColor”:”7”},<br>    “shanghai”:{“value”:”0”,”index”:”25”,”stateInitColor”:”7”},<br>    “qinghai”:{“value”:”0”,”index”:”26”,”stateInitColor”:”7”},<br>    “xizang”:{“value”:”0”,”index”:”27”,”stateInitColor”:”7”},<br>    “henan”:{“value”:”0”,”index”:”28”,”stateInitColor”:”7”},<br>    “xinjiang”:{“value”:”0”,”index”:”29”,”stateInitColor”:”7”},<br>    “heilongjiang”:{“value”:”0”,”index”:”30”,”stateInitColor”:”7”},<br>    “chongqing”:{“value”:”0”,”index”:”31”,”stateInitColor”:”7”},<br>    “aomen”:{“value”:”0”,”index”:”32”,”stateInitColor”:”7”},<br>    “xianggang”:{“value”:”0”,”index”:”33”,”stateInitColor”:”7”},<br>    “taiwan”:{“value”:”0”,”index”:”34”,”stateInitColor”:”7”}};<br>            var i = 1;<br>            for(k in data){<br>                if(i &lt;= 12){<br>                    var _cls = i &lt; 4 ? ‘active’ : ‘’;<br>                    $(‘#MapControl .list1’).append(‘<li name="'+k+'"><div class="mapInfo"><i class="'+_cls+'">‘+(i++)+’</i><span>‘+chinaMapConfig.names[k]+’</span><b>‘+data[k].value+’</b></div></li>‘)<br>                }else if(i &lt;= 24){<br>                    $(‘#MapControl .list2’).append(‘<li name="'+k+'"><div class="mapInfo"><i>‘+(i++)+’</i><span>‘+chinaMapConfig.names[k]+’</span><b>‘+data[k].value+’</b></div></li>‘)<br>                }else{<br>                    $(‘#MapControl .list3’).append(‘<li name="'+k+'"><div class="mapInfo"><i>‘+(i++)+’</i><span>‘+chinaMapConfig.names[k]+’</span><b>‘+data[k].value+’</b></div></li>‘)<br>                }<br>            }</p>
-<pre><code>        <span class="keyword">var</span> stateColorList = [<span class="string">'003399'</span>, <span class="string">'0058B0'</span>, <span class="string">'0071E1'</span>, <span class="string">'1C8DFF'</span>, <span class="string">'51A8FF'</span>, <span class="string">'82C0FF'</span>, <span class="string">'AAD5ee'</span>, <span class="string">'AAD5FF'</span>];
-
-        <span class="keyword">var</span> mapRegion = $(<span class="string">'#RegionMap'</span>).SVGMap({
-            external: <span class="literal">true</span>,
-            mapName: <span class="string">'china'</span>,
-            mapWidth: <span class="number">350</span>,
-            mapHeight: <span class="number">350</span>,
-            stateData: data,
-            <span class="comment">// mapTipWidth: 118,</span>
-            <span class="comment">// mapTipHeight: 47,</span>
-            <span class="comment">// mapTipX: 2,</span>
-            <span class="comment">// mapTipY: 0,</span>
-            mapTipHtml: <span class="function"><span class="keyword">function</span> (<span class="params">mapData, obj</span>) </span>{
-                <span class="keyword">var</span> _value = mapData[obj.id].value;
-                <span class="keyword">var</span> _idx = mapData[obj.id].index;
-                <span class="keyword">var</span> active = <span class="string">''</span>;
-                _idx &lt; <span class="number">4</span> ? active = <span class="string">'active'</span> : active = <span class="string">''</span>;
-                <span class="keyword">var</span> tipStr = <span class="string">'&lt;div class="mapInfo"&gt;&lt;i class="'</span> + active + <span class="string">'"&gt;'</span> + _idx + <span class="string">'&lt;/i&gt;&lt;span&gt;'</span> + obj.name + <span class="string">'&lt;/span&gt;&lt;b&gt;'</span> + _value + <span class="string">'&lt;/b&gt;&lt;/div&gt;'</span>;
-                <span class="keyword">return</span> tipStr;
-            }
-        });
-        $(<span class="string">'#MapControl li'</span>).hover(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{
-            <span class="keyword">var</span> thisName = $(<span class="keyword">this</span>).attr(<span class="string">'name'</span>);
-
-            <span class="keyword">var</span> thisHtml = $(<span class="keyword">this</span>).html();
-            $(<span class="string">'#MapControl li'</span>).removeClass(<span class="string">'select'</span>);
-            $(<span class="keyword">this</span>).addClass(<span class="string">'select'</span>);
-            $(<span class="built_in">document</span>.body).append(<span class="string">'&lt;div id="MapTip1" class="mapTip"&gt;&lt;div class="con"&gt;&lt;/div&gt;&lt;/div'</span>);
-
-            $(<span class="string">'#MapTip1 .con'</span>).html(thisHtml);
-            $(<span class="string">'#MapTip1'</span>).css({
-                left: $(mapRegion.externalData[thisName].node).offset().left - <span class="number">50</span>,
-                top: $(mapRegion.externalData[thisName].node).offset().top - <span class="number">40</span>
-            }).show();
-            mapRegion.externalData[thisName].attr({
-                fill: <span class="string">'#E99A4D'</span>
-            });
-        }, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{
-            <span class="keyword">var</span> thisName = $(<span class="keyword">this</span>).attr(<span class="string">'name'</span>);
-
-            $(<span class="string">'#MapTip1'</span>).remove();
-            $(<span class="string">'#MapControl li'</span>).removeClass(<span class="string">'select'</span>);
-            mapRegion.externalData[$(<span class="keyword">this</span>).attr(<span class="string">'name'</span>)].attr({
-                fill: <span class="string">"#"</span> + stateColorList[data[$(<span class="keyword">this</span>).attr(<span class="string">'name'</span>)].stateInitColor]
-            });
-        });
-
-        $(<span class="string">'#MapColor'</span>).show();
-<span class="comment">//     }</span>
-<span class="comment">// });</span>
-</code></pre><p>});<br></script><br> <br> <body><br>  <div class="wrap"> </div></body></p>
-   <div class="items" id="Item9"><br>    <h2>项目分布</h2><br>    <a href="javascript:;" class="fold" target="_blank" rel="external"></a><br>    <div class="itemCon"><br>     <style type="text/css"><br>.regionList{float:left; margin-top:15px;}<br>.regionList ul{float:left; width:110px; height:100%; margin-right:5px; display:inline; font-family: Microsoft yahei;}<br>.regionList ul li{ height:24px; margin-left:10px; padding:0 0px; border:1px solid #fff; line-height:24px;}<br>.regionList ul li.select{border:1px solid #D3D3D3; background:#FFF1BF}<br><br>.mapInfo i{ display:inline-block; width:15px; height:15px; margin-top:5px; line-height:15px; font-style:normal; background:#aeaeae; color:#fff; font-size:11px; font-family: Tahoma; -webkit-border-radius:15px; border-radius:15px; text-align:center}<br>.mapInfo i.active{background:#E27F21;}<br>.mapInfo span{ padding:0 5px 0 3px;}<br>.mapInfo b{ font-weight:normal; color:#2770B5}<br><br>.regionMap{float:left; margin-left:70px; display:inline;}<br></style><br>     <div id="Region" style="position:relative; height:360px;"><br>      <div class="regionList" id="MapControl"><br>       <ul class="list1"></ul><br>       <ul class="list2"></ul><br>       <ul class="list3"></ul><br>      </div><br>      <div class="regionMap" id="RegionMap"></div><br>      <div id="MapColor" style=" display:none; float:left; width:30px; height:180px; margin:80px 0 0 10px; display:inline; background:url(images/map_color.png) center 0;"></div><br>     </div><br>    </div><br>   </div><br>   
-
-<p> </p>
-<p>转载请注明：<br>原作者：赖韬(咨询师)<br>文章出处：<a href="http://tianyv.github.io" target="_blank" rel="external">http://tianyv.github.io</a></p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
         <time datetime="2015-07-15T06:46:11.000Z"><a href="/2015/07/15/jxhs/">2015-07-15</a></time>
       
       
@@ -729,6 +624,54 @@
         
           <div class="alignleft">
             <a href="/2015/06/15/perlintro/#more" class="more-link">阅读全文</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-06-03T14:05:32.000Z"><a href="/2015/06/03/jxfp/">2015-06-03</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/06/03/jxfp/">绩效分配模式</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>本节介绍绩效分配的两种模式。还有就是在改革过程中是体现战略导向以领导决策为主，还是重在体现公平，员工群策群力。<br>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2015/06/03/jxfp/#more" class="more-link">阅读全文</a>
           </div>
         
         
