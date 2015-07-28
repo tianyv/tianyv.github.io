@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Win32::OLE | LaiTao&#39;s blog</title>
+  <title>R面向对象系统R6包及其继承 | LaiTao&#39;s blog</title>
   <meta name="author" content="赖 韬">
   
   <meta name="description" content="管理咨询 管理顾问 绩效管理 数据分析 R perl LaTex">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="R面向对象系统R6包及其继承"/>
   <meta property="og:site_name" content="LaiTao&#39;s blog"/>
 
   
@@ -202,25 +202,111 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title tag">Win32::OLE</h2>
-
-
-  <div class="archive">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
     
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2015-07-17T11:03:56.000Z"><a href="/2015/07/17/perlScraper/">2015-07-17</a></time>
-            
-              <h1 class="title"><a href="/2015/07/17/perlScraper/">Web::Scraper抓取网页信息</a></h1>
-            
-          </header>
-        </div>
-      </article>
+      <img src="">
     
   </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-07-25T13:21:30.000Z"><a href="/2015/07/25/R6oop/">2015-07-25</a></time>
+      
+      
+  
+    <h1 class="title">R面向对象系统R6包及其继承</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>这一章介绍R面向对象系统R6及其继承。<br><a id="more"></a></p>
+<h4 id="一、R6_Example">一、R6 Example</h4><p><strong>R6的类成员</strong>，包括<strong>属性</strong>和<strong>方法</strong>2部分</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(R6)</span><br><span class="line"><span class="comment">#定义一个R6类</span></span><br><span class="line">TimePay &lt;- R6Class(<span class="string">"TimePay"</span>,</span><br><span class="line">  public=list(</span><br><span class="line">    <span class="comment">#公有属性</span></span><br><span class="line">    name=<span class="literal">NA</span>, </span><br><span class="line">    initialize = <span class="keyword">function</span>(name,pay)&#123; </span><br><span class="line">    self$name &lt;- name</span><br><span class="line">    private$pay &lt;- pay</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">#定义公有方法</span></span><br><span class="line">    Income = <span class="keyword">function</span>()&#123; </span><br><span class="line">      print(paste(<span class="string">"你好"</span>,self$name))</span><br><span class="line">      print(paste(<span class="string">"你本月工资:"</span>,private$pay))</span><br><span class="line">    &#125;</span><br><span class="line">  ),</span><br><span class="line">  <span class="comment">#私有属性  </span></span><br><span class="line">  private=list(pay=<span class="literal">NA</span>)</span><br><span class="line">)</span><br><span class="line">tp&lt;-TimePay$new(<span class="string">"Tianyv"</span>,<span class="number">4400</span>)</span><br><span class="line">tp$Income()</span><br></pre></td></tr></table></figure>
+<p>定义公有属性及方法用<strong>public=list(属性,方法=function(){})</strong>,私有用<strong>private</strong>;<br>访问公有用：self$属性，self$方法();访问私有用：private$属性，private$方法()</p>
+<h4 id="二、R6类的继承关系">二、R6类的继承关系</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">OverTimePay &lt;- R6Class(<span class="string">"OverTimePay"</span>,</span><br><span class="line">  inherit = TimePay,</span><br><span class="line">  public=list(</span><br><span class="line">    day=<span class="literal">NA</span>, </span><br><span class="line">    getday = <span class="keyword">function</span>() self$day,</span><br><span class="line">    setday = <span class="keyword">function</span>(value) self$day &lt;- value,</span><br><span class="line">    Income = <span class="keyword">function</span>()&#123; </span><br><span class="line">    super$Income()</span><br><span class="line">    print(paste(<span class="string">"你本月加班天:"</span>,self$day))</span><br><span class="line">    overtime.pay=private$pay/<span class="number">22</span>*<span class="number">3</span>*self$day</span><br><span class="line">    print(paste(<span class="string">"加班工资:"</span>,overtime.pay))</span><br><span class="line">    &#125;</span><br><span class="line">  )</span><br><span class="line">)</span><br><span class="line">otp&lt;-OverTimePay$new(<span class="string">"Tianyv"</span>,<span class="number">4400</span>)</span><br><span class="line">otp$setday(<span class="number">3</span>)</span><br><span class="line">otp$Income()</span><br></pre></td></tr></table></figure>
+<p>继承使用<strong>inherit</strong>；调用父类方法用<strong>super$Fun()</strong></p>
+<p>转载请注明：<br>原作者：赖韬(咨询师)<br>文章出处：<a href="http://tianyv.github.io" target="_blank" rel="external">http://tianyv.github.io</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/R/">R</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/R/">R</a>, <a href="/tags/R6/">R6</a>, <a href="/tags/oop/">oop</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more"></span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=3326447" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+ <nav id="pagination" >
+    
+    
+    <a href="/2015/07/25/mooseext/" class="alignright next" >下一页</a>
+    
+    <div class="clearfix"></div>
+</nav>
+
+
+
+<section id="comment">
+
+<!-- Duoshuo Comment BEGIN -->
+	<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"zippera"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- Duoshuo Comment END -->  
+
+  
+</section>
+
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
