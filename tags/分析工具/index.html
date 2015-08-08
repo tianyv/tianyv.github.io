@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Moose的继承 | LaiTao&#39;s blog</title>
+  <title>分析工具 | LaiTao&#39;s blog</title>
   <meta name="author" content="赖 韬">
   
   <meta name="description" content="管理咨询 管理顾问 绩效管理 数据分析 R perl LaTex">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Moose的继承"/>
+  
   <meta property="og:site_name" content="LaiTao&#39;s blog"/>
 
   
@@ -202,109 +202,25 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+<h2 class="archive-title tag">分析工具</h2>
+
+
+  <div class="archive">
     
-      <img src="">
+      <article class="post">
+        <div class="post-content">
+          <header>
+            <div class="icon"></div>
+            <time datetime="2015-08-06T06:43:08.000Z"><a href="/2015/08/06/rShiny/">2015-08-06</a></time>
+            
+              <h1 class="title"><a href="/2015/08/06/rShiny/">Shiny</a></h1>
+            
+          </header>
+        </div>
+      </article>
     
   </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2015-07-25T13:16:04.000Z"><a href="/2015/07/25/mooseext/">2015-07-25</a></time>
-      
-      
-  
-    <h1 class="title">Moose的继承</h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>这一章介绍perl面向对象Moose的继承。<br><a id="more"></a></p>
-<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> TimePay;</span><br><span class="line"><span class="keyword">use</span> Moose;</span><br><span class="line"><span class="keyword">use</span> Modern::Perl;</span><br><span class="line"></span><br><span class="line">has <span class="string">name =&gt;</span> ( <span class="string">is =&gt;</span> <span class="string">'rw'</span>, <span class="string">isa =&gt;</span> <span class="string">'Str'</span> );</span><br><span class="line">has <span class="string">pay  =&gt;</span> ( <span class="string">is =&gt;</span> <span class="string">'rw'</span>, <span class="string">isa =&gt;</span> <span class="string">'Int'</span> );</span><br><span class="line"></span><br><span class="line"><span class="sub"><span class="keyword">sub</span> Income &#123;</span></span><br><span class="line">    <span class="keyword">my</span> <span class="variable">$self</span> = <span class="keyword">shift</span>;</span><br><span class="line">    <span class="keyword">say</span> <span class="string">'你好'</span> . <span class="variable">$self</span>-&gt;name;</span><br><span class="line">    <span class="keyword">say</span> <span class="string">'你本月工资:'</span> . <span class="variable">$self</span>-&gt;pay;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> OverTimePay;</span><br><span class="line"><span class="keyword">use</span> Moose;</span><br><span class="line"><span class="keyword">use</span> Modern::Perl;</span><br><span class="line"></span><br><span class="line">extends <span class="string">"TimePay"</span>;</span><br><span class="line"></span><br><span class="line">has <span class="string">day =&gt;</span> ( <span class="string">is =&gt;</span> <span class="string">'rw'</span>, <span class="string">isa =&gt;</span> <span class="string">'Int'</span> );</span><br><span class="line"></span><br><span class="line"><span class="sub"><span class="keyword">sub</span> Income &#123;</span></span><br><span class="line">    <span class="keyword">my</span> <span class="variable">$self</span> = <span class="keyword">shift</span>;</span><br><span class="line">    <span class="variable">$self</span>-&gt;SUPER::Income();</span><br><span class="line">    <span class="keyword">say</span> <span class="string">'你本月加班天:'</span> . <span class="variable">$self</span>-&gt;day;</span><br><span class="line">    <span class="keyword">my</span> <span class="variable">$overtime_pay</span> = <span class="variable">$self</span>-&gt;pay / <span class="number">22</span> * <span class="number">3</span> * <span class="variable">$self</span>-&gt;day;</span><br><span class="line">    <span class="keyword">say</span> <span class="string">'加班工资:'</span> . <span class="variable">$self</span>-&gt;pay;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> main;</span><br><span class="line"></span><br><span class="line"><span class="comment">#my $tp =TimePay-&gt; new ( name=&gt;"Tianyv",pay=&gt; 4400 );</span></span><br><span class="line"><span class="comment">#$tp-&gt;Income();</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">my</span> <span class="variable">$otp</span> = OverTimePay-&gt;new( <span class="string">name =&gt;</span> <span class="string">"Tianyv"</span>, <span class="string">pay =&gt;</span> <span class="number">4400</span> );</span><br><span class="line"><span class="variable">$otp</span>-&gt;day(<span class="number">3</span>);</span><br><span class="line"><span class="variable">$otp</span>-&gt;Income();</span><br></pre></td></tr></table></figure>
-<p>转载请注明：<br>原作者：赖韬(咨询师)<br>文章出处：<a href="http://tianyv.github.io" target="_blank" rel="external">http://tianyv.github.io</a></p>
-
-      
-    </div>
-    <footer>
-      
-        
-  
-  <div class="categories">
-    <a href="/categories/perl/">perl</a>
-  </div>
-
-        
-  
-  <div class="tags">
-    <a href="/tags/Moose/">Moose</a>, <a href="/tags/oop/">oop</a>, <a href="/tags/perl/">perl</a>
-  </div>
-
-<!-- Baidu Button BEGIN -->
-<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
-<a class="bds_qzone"></a>
-<a class="bds_tsina"></a>
-<a class="bds_tqq"></a>
-<a class="bds_renren"></a>
-<a class="bds_t163"></a>
-<span class="bds_more"></span>
-<a class="shareCount"></a>
-</div>
-<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=3326447" ></script>
-<script type="text/javascript" id="bdshell_js"></script>
-<script type="text/javascript">
-document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
-</script>
-<!-- Baidu Button END -->      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
- <nav id="pagination" >
-    
-    <a href="/2015/07/25/R6oop/" class="alignleft prev" >上一页</a>
-    
-    
-    <a href="/2015/07/17/perlScraper/" class="alignright next" >下一页</a>
-    
-    <div class="clearfix"></div>
-</nav>
-
-
-
-<section id="comment">
-
-<!-- Duoshuo Comment BEGIN -->
-	<div class="ds-thread"></div>
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"zippera"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = 'http://static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		|| document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- Duoshuo Comment END -->  
-
-  
-</section>
-
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">

@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Moose的继承 | LaiTao&#39;s blog</title>
+  <title>收费价格调整对医院的影响 | LaiTao&#39;s blog</title>
   <meta name="author" content="赖 韬">
   
   <meta name="description" content="管理咨询 管理顾问 绩效管理 数据分析 R perl LaTex">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Moose的继承"/>
+  <meta property="og:title" content="收费价格调整对医院的影响"/>
   <meta property="og:site_name" content="LaiTao&#39;s blog"/>
 
   
@@ -220,18 +220,47 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2015-07-25T13:16:04.000Z"><a href="/2015/07/25/mooseext/">2015-07-25</a></time>
+        <time datetime="2015-08-05T02:21:55.000Z"><a href="/2015/08/05/fxzctz/">2015-08-05</a></time>
       
       
   
-    <h1 class="title">Moose的继承</h1>
+    <h1 class="title">收费价格调整对医院的影响</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>这一章介绍perl面向对象Moose的继承。<br><a id="more"></a></p>
-<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> TimePay;</span><br><span class="line"><span class="keyword">use</span> Moose;</span><br><span class="line"><span class="keyword">use</span> Modern::Perl;</span><br><span class="line"></span><br><span class="line">has <span class="string">name =&gt;</span> ( <span class="string">is =&gt;</span> <span class="string">'rw'</span>, <span class="string">isa =&gt;</span> <span class="string">'Str'</span> );</span><br><span class="line">has <span class="string">pay  =&gt;</span> ( <span class="string">is =&gt;</span> <span class="string">'rw'</span>, <span class="string">isa =&gt;</span> <span class="string">'Int'</span> );</span><br><span class="line"></span><br><span class="line"><span class="sub"><span class="keyword">sub</span> Income &#123;</span></span><br><span class="line">    <span class="keyword">my</span> <span class="variable">$self</span> = <span class="keyword">shift</span>;</span><br><span class="line">    <span class="keyword">say</span> <span class="string">'你好'</span> . <span class="variable">$self</span>-&gt;name;</span><br><span class="line">    <span class="keyword">say</span> <span class="string">'你本月工资:'</span> . <span class="variable">$self</span>-&gt;pay;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> OverTimePay;</span><br><span class="line"><span class="keyword">use</span> Moose;</span><br><span class="line"><span class="keyword">use</span> Modern::Perl;</span><br><span class="line"></span><br><span class="line">extends <span class="string">"TimePay"</span>;</span><br><span class="line"></span><br><span class="line">has <span class="string">day =&gt;</span> ( <span class="string">is =&gt;</span> <span class="string">'rw'</span>, <span class="string">isa =&gt;</span> <span class="string">'Int'</span> );</span><br><span class="line"></span><br><span class="line"><span class="sub"><span class="keyword">sub</span> Income &#123;</span></span><br><span class="line">    <span class="keyword">my</span> <span class="variable">$self</span> = <span class="keyword">shift</span>;</span><br><span class="line">    <span class="variable">$self</span>-&gt;SUPER::Income();</span><br><span class="line">    <span class="keyword">say</span> <span class="string">'你本月加班天:'</span> . <span class="variable">$self</span>-&gt;day;</span><br><span class="line">    <span class="keyword">my</span> <span class="variable">$overtime_pay</span> = <span class="variable">$self</span>-&gt;pay / <span class="number">22</span> * <span class="number">3</span> * <span class="variable">$self</span>-&gt;day;</span><br><span class="line">    <span class="keyword">say</span> <span class="string">'加班工资:'</span> . <span class="variable">$self</span>-&gt;pay;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> main;</span><br><span class="line"></span><br><span class="line"><span class="comment">#my $tp =TimePay-&gt; new ( name=&gt;"Tianyv",pay=&gt; 4400 );</span></span><br><span class="line"><span class="comment">#$tp-&gt;Income();</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">my</span> <span class="variable">$otp</span> = OverTimePay-&gt;new( <span class="string">name =&gt;</span> <span class="string">"Tianyv"</span>, <span class="string">pay =&gt;</span> <span class="number">4400</span> );</span><br><span class="line"><span class="variable">$otp</span>-&gt;day(<span class="number">3</span>);</span><br><span class="line"><span class="variable">$otp</span>-&gt;Income();</span><br></pre></td></tr></table></figure>
+        <p>今年，随着医疗改革的深入，多个省份药品实施零差价销售、损失的部分利润通过收费价格调整来弥补。由于政策的变化，多家客户希望通过我们的帮助，了解价格调整对医院的影响，对绩效方案进行合理调整，并说服员工接受方案的调整。而本章仅重点说明收费价格调整对医院的影响。<br><a id="more"></a></p>
+<h2 id="一、收费价格调整对医院的影响">一、收费价格调整对医院的影响</h2><ul>
+<li>本次收费价格调整：<ul>
+<li>西药零差价，少了15%利润</li>
+<li>CT降价12%</li>
+<li>检验费降价5%</li>
+<li>其他项目调价平均增加12%</li>
+</ul>
+</li>
+</ul>
+<p><img src="/img/sjfx/03-1tjyx.png" width="500"></p>
+<p>以一家未调价前药占比40%、CT占比4.5%和检验占比15%的医院为例，假如年收入1个亿，降价全年损失纯收入730万，上调项目只弥补486万，医院倒亏240万。相当于每收病人100元，受此次价格调整的影响，医院损失2.4元；而药品比例相对合理达30%医院，每收病人100元，受此次价格调整的影响，医院只损失1毛钱。</p>
+<h2 id="二、收费价格调整对各收费项目的影响">二、收费价格调整对各收费项目的影响</h2><ul>
+<li>从收费项目来看：<ul>
+<li>重点增加原收费标准严重偏低的劳务性收入:增幅最大的是护理费及诊查费</li>
+<li>增加难度大风险高的收费项目:手术费及麻醉费增长20%</li>
+<li>增加心电（20%）、胃镜（20%）和脑电（7.8%）小特功能科室的收费项目</li>
+<li>降低大型设备CT检查费用12%；降低化验检查费用5%</li>
+</ul>
+</li>
+</ul>
+<p><img src="/img/sjfx/03-2tzbh.png" width="550"></p>
+<h2 id="三、收费价格调整对科室核算收入的影响">三、收费价格调整对科室核算收入的影响</h2><ul>
+<li>科室核算收入分析结果（不附表）：<ul>
+<li>没明显变化的科室：ICU、急诊科、门诊和B超室</li>
+<li>内科系统平均增长10%、外科系统平均增长13%、眼耳鼻喉科15%、儿科13%</li>
+<li>增长接近20%的科室：血透室、手术室、中医科、口腔科、胃镜室、心电图室</li>
+</ul>
+</li>
+</ul>
+<h2 id="四、药占比控制要求">四、药占比控制要求</h2><p>随本次收费价格调整，广东省还以文件的方式下发了药占比的控制标准，调价后的医院药占比要控制在30%以内。</p>
 <p>转载请注明：<br>原作者：赖韬(咨询师)<br>文章出处：<a href="http://tianyv.github.io" target="_blank" rel="external">http://tianyv.github.io</a></p>
 
       
@@ -241,13 +270,13 @@
         
   
   <div class="categories">
-    <a href="/categories/perl/">perl</a>
+    <a href="/categories/数据分析/">数据分析</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/Moose/">Moose</a>, <a href="/tags/oop/">oop</a>, <a href="/tags/perl/">perl</a>
+    <a href="/tags/医疗行业/">医疗行业</a>, <a href="/tags/数据分析/">数据分析</a>, <a href="/tags/管理咨询/">管理咨询</a>, <a href="/tags/绩效管理/">绩效管理</a>
   </div>
 
 <!-- Baidu Button BEGIN -->
@@ -275,10 +304,10 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 
  <nav id="pagination" >
     
-    <a href="/2015/07/25/R6oop/" class="alignleft prev" >上一页</a>
+    <a href="/2015/08/06/rShiny/" class="alignleft prev" >上一页</a>
     
     
-    <a href="/2015/07/17/perlScraper/" class="alignright next" >下一页</a>
+    <a href="/2015/07/25/R6oop/" class="alignright next" >下一页</a>
     
     <div class="clearfix"></div>
 </nav>
