@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>关于作者 | LaiTao&#39;s blog</title>
+  <title>Mojolicious Login Example | LaiTao&#39;s blog</title>
   <meta name="author" content="赖 韬">
   
   <meta name="description" content="管理咨询 管理顾问 绩效管理 数据分析 R perl LaTex">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="关于作者"/>
+  <meta property="og:title" content="Mojolicious Login Example"/>
   <meta property="og:site_name" content="LaiTao&#39;s blog"/>
 
   
@@ -202,28 +202,63 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="page">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
   
   <div class="post-content">
     <header>
       
+        <div class="icon"></div>
+        <time datetime="2015-11-21T20:21:57.000Z"><a href="/2015/11/22/mojoLogin/">2015-11-22</a></time>
+      
       
   
-    <h1 class="title">关于作者</h1>
+    <h1 class="title">Mojolicious Login Example</h1>
   
 
     </header>
     <div class="entry">
       
-        <p><img src="/img/myintr.png" width="650"></p>
-<p><a href="http://blog.chinaunix.net/uid/22674875.html" target="_blank" rel="external">我的另外一个perl技术博客：http://blog.chinaunix.net/uid/22674875.html</a></p>
+        <p>Mojolicious+Boostrap3 Login Example!</p>
+<ul>
+<li>Boostrap3 </li>
+<li>Mojolicious::Lite </li>
+<li>session、Login、Plugin MyAuth  <a id="more"></a>
+</li>
+</ul>
+<p>详细源码请到chinaunix论坛下载。</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> Mojolicious::Lite;</span><br><span class="line"></span><br><span class="line">helper <span class="string">auth =&gt;</span> <span class="sub"><span class="keyword">sub</span> &#123;</span></span><br><span class="line">    <span class="keyword">my</span> ( <span class="variable">$c</span>, <span class="variable">$username</span>, <span class="variable">$password</span> ) = <span class="variable">@_</span>;</span><br><span class="line">    <span class="keyword">state</span> <span class="variable">$users</span> = &#123; <span class="string">tianyv =&gt;</span> <span class="string">'123'</span>, &#125;;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">unless</span> <span class="variable">$users</span>-&gt;&#123;<span class="variable">$username</span>&#125; eq <span class="variable">$password</span>;</span><br><span class="line">    <span class="variable">$c</span>-&gt;session( <span class="string">user =&gt;</span> <span class="variable">$username</span> );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">any <span class="string">'/'</span> =&gt; <span class="sub"><span class="keyword">sub</span> &#123;</span></span><br><span class="line">    <span class="keyword">my</span> <span class="variable">$c</span> = <span class="keyword">shift</span>;</span><br><span class="line">    <span class="keyword">my</span> ( <span class="variable">$username</span>, <span class="variable">$password</span> ) = <span class="keyword">map</span> &#123; <span class="variable">$c</span>-&gt;param(<span class="variable">$_</span>) &#125; <span class="keyword">qw</span>/username password/;</span><br><span class="line">    <span class="variable">$c</span>-&gt;auth( <span class="variable">$username</span>, <span class="variable">$password</span> ) <span class="keyword">if</span> <span class="variable">$username</span>;</span><br><span class="line">    <span class="variable">$c</span>-&gt;render(<span class="string">'index'</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">any <span class="string">'/logout'</span> =&gt; <span class="sub"><span class="keyword">sub</span> &#123;</span></span><br><span class="line">    <span class="keyword">my</span> <span class="variable">$c</span> = <span class="keyword">shift</span>;</span><br><span class="line">    <span class="variable">$c</span>-&gt;session( <span class="string">expires =&gt;</span> <span class="number">1</span> );</span><br><span class="line">    <span class="variable">$c</span>-&gt;redirect_to(<span class="string">'/'</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">app-&gt;start;</span><br></pre></td></tr></table></figure>
+<p>视图效果：</p>
+<p><img src="/img/perl/01mojoLogin.gif" width="600"><br><img src="/img/perl/02mojoLogin.gif" width="600"><br><img src="/img/perl/03mojoLogin.gif" width="600"><br><img src="/img/perl/04mojoLogin.gif" width="600"></p>
+<p>转载请注明：<br>原作者：赖韬(咨询师)<br>文章出处：<a href="http://tianyv.github.io" target="_blank" rel="external">http://tianyv.github.io</a></p>
 
       
     </div>
     <footer>
       
         
+  
+  <div class="categories">
+    <a href="/categories/perl/">perl</a>
+  </div>
+
         
+  
+  <div class="tags">
+    <a href="/tags/Boostrap3/">Boostrap3</a>, <a href="/tags/Input/">Input</a>, <a href="/tags/Mojolicious/">Mojolicious</a>, <a href="/tags/perl/">perl</a>
+  </div>
+
 <!-- Baidu Button BEGIN -->
 <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
 <a class="bds_qzone"></a>
@@ -249,6 +284,8 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 
  <nav id="pagination" >
     
+    
+    <a href="/2015/08/13/ysth/" class="alignright next" >下一页</a>
     
     <div class="clearfix"></div>
 </nav>
