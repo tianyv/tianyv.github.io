@@ -1,0 +1,434 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>某行业某岗位薪酬水平调研抽样设计 | LaiTao&#39;s blog</title>
+  <meta name="author" content="赖 韬">
+  
+  <meta name="description" content="管理咨询 管理顾问 绩效管理 数据分析 R perl LaTex">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="某行业某岗位薪酬水平调研抽样设计"/>
+  <meta property="og:site_name" content="LaiTao&#39;s blog"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="/atom.xml" title="LaiTao&#39;s blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//libs.baidu.com/jquery/1.8.0/jquery.min.js"></script>
+</head>
+
+
+<body>
+  <header id="header" class="inner">
+<div class="alignleft">
+  <h1><a href="/">LaiTao&#39;s blog</a></h1>
+  <h2><a href="/">管理不在于知，而在于行！</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">归档</a></li>
+    
+      <li><a href="/about">关于</a></li>
+    
+      <li><a href="/tools">工具</a></li>
+    
+	<li> <a href="/atom.xml">RSS</a> </li>
+<li> <a title="把这个链接拖到你的Chrome收藏夹工具栏中" href='javascript:(function() {
+	function c() {
+		var e = document.createElement("link");
+		e.setAttribute("type", "text/css");
+		e.setAttribute("rel", "stylesheet");
+		e.setAttribute("href", f);
+		e.setAttribute("class", l);
+		document.body.appendChild(e)
+	}
+ 
+	function h() {
+		var e = document.getElementsByClassName(l);
+		for (var t = 0; t < e.length; t++) {
+			document.body.removeChild(e[t])
+		}
+	}
+ 
+	function p() {
+		var e = document.createElement("div");
+		e.setAttribute("class", a);
+		document.body.appendChild(e);
+		setTimeout(function() {
+			document.body.removeChild(e)
+		}, 100)
+	}
+ 
+	function d(e) {
+		return {
+			height : e.offsetHeight,
+			width : e.offsetWidth
+		}
+	}
+ 
+	function v(i) {
+		var s = d(i);
+		return s.height > e && s.height < n && s.width > t && s.width < r
+	}
+ 
+	function m(e) {
+		var t = e;
+		var n = 0;
+		while (!!t) {
+			n += t.offsetTop;
+			t = t.offsetParent
+		}
+		return n
+	}
+ 
+	function g() {
+		var e = document.documentElement;
+		if (!!window.innerWidth) {
+			return window.innerHeight
+		} else if (e && !isNaN(e.clientHeight)) {
+			return e.clientHeight
+		}
+		return 0
+	}
+ 
+	function y() {
+		if (window.pageYOffset) {
+			return window.pageYOffset
+		}
+		return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+	}
+ 
+	function E(e) {
+		var t = m(e);
+		return t >= w && t <= b + w
+	}
+ 
+	function S() {
+		var e = document.createElement("audio");
+		e.setAttribute("class", l);
+		e.src = i;
+		e.loop = false;
+		e.addEventListener("canplay", function() {
+			setTimeout(function() {
+				x(k)
+			}, 500);
+			setTimeout(function() {
+				N();
+				p();
+				for (var e = 0; e < O.length; e++) {
+					T(O[e])
+				}
+			}, 15500)
+		}, true);
+		e.addEventListener("ended", function() {
+			N();
+			h()
+		}, true);
+		e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+		document.body.appendChild(e);
+		e.play()
+	}
+ 
+	function x(e) {
+		e.className += " " + s + " " + o
+	}
+ 
+	function T(e) {
+		e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+	}
+ 
+	function N() {
+		var e = document.getElementsByClassName(s);
+		var t = new RegExp("\\b" + s + "\\b");
+		for (var n = 0; n < e.length; ) {
+			e[n].className = e[n].className.replace(t, "")
+		}
+	}
+ 
+	var e = 30;
+	var t = 30;
+	var n = 350;
+	var r = 350;
+	var i = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3";
+	var s = "mw-harlem_shake_me";
+	var o = "im_first";
+	var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+	var a = "mw-strobe_light";
+	var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+	var l = "mw_added_css";
+	var b = g();
+	var w = y();
+	var C = document.getElementsByTagName("*");
+	var k = null;
+	for (var L = 0; L < C.length; L++) {
+		var A = C[L];
+		if (v(A)) {
+			if (E(A)) {
+				k = A;
+				break
+			}
+		}
+	}
+	if (A === null) {
+		console.warn("Could not find a node of the right size. Please try a different page.");
+		return
+	}
+	c();
+	S();
+	var O = [];
+	for (var L = 0; L < C.length; L++) {
+		var A = C[L];
+		if (v(A)) {
+			O.push(A)
+		}
+	}
+})()    '>High一下</a> </li>
+
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-12-03T09:42:53.000Z"><a href="/2015/12/03/fxsam/">2015-12-03</a></time>
+      
+      
+  
+    <h1 class="title">某行业某岗位薪酬水平调研抽样设计</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>为了调查某个区域某行业某岗位的薪酬水平，科学地选取样本量，可以保证准确性的同时又能节约时间与成本。</p>
+<ul>
+<li>样本量太少，会导致误差过大</li>
+<li>样本量太大，虽然保证了质量，但同时会增加过多的人力、物力及费用</li>
+</ul>
+<a id="more"></a>
+<h2 id="一、样本精度要求">一、样本精度要求</h2><p>分两种情况设置样本精度要求：</p>
+<ul>
+<li>假如总体方差已知，在90%的置信度下，要求均值的误差不超过200</li>
+<li>假如总体方差未知，在90%的置信度下，要求均值的误差不超过370</li>
+</ul>
+<h2 id="二、R代码模拟">二、R代码模拟</h2><p>采用某区域10家医院828名医生、916名护士某月的绩效工资水平作为总体。</p>
+<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">library<span class="params">(sampling)</span></span><br><span class="line">library<span class="params">(sampln)</span></span><br><span class="line"></span><br><span class="line">get.cw&lt;-getwd<span class="params">()</span></span><br><span class="line">fh&lt;-paste<span class="params">(get.cw,<span class="string">"sam.csv"</span>,sep = <span class="string">"/"</span>)</span></span><br><span class="line">print<span class="params">(fh)</span></span><br><span class="line">dff&lt;-read.csv<span class="params">(fh)</span></span><br><span class="line">colnames<span class="params">(dff)</span>&lt;-c<span class="params">(<span class="string">"NO"</span>,<span class="string">"name"</span>,<span class="string">"jd"</span>,<span class="string">"ks"</span>,<span class="string">"zw"</span>,<span class="string">"gw"</span>,<span class="string">"jx"</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> <span class="params">(em in c<span class="params">(<span class="string">"医生"</span>,<span class="string">"护士"</span>)</span>)</span>&#123;</span><br><span class="line">  sub_df&lt;-subset<span class="params">(dff,dff$gw==em)</span></span><br><span class="line">  jx&lt;-sub_df$jx</span><br><span class="line">  n&lt;-length<span class="params">(jx)</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">#</span>打印描述统计结果</span><br><span class="line">  print<span class="params">(paste<span class="params">(em,<span class="string">"Summary:"</span>,sep=<span class="string">""</span>)</span>)</span></span><br><span class="line">  print<span class="params">(summary<span class="params">(jx)</span>)</span></span><br><span class="line">  sdjx&lt;-<span class="built_in">round</span><span class="params">(sd<span class="params">(jx)</span>,<span class="number">0</span>)</span></span><br><span class="line">  sT&lt;-<span class="built_in">round</span><span class="params">(var<span class="params">(jx)</span>)</span></span><br><span class="line">  print<span class="params">(paste<span class="params">(c<span class="params">(em,<span class="string">"sd:"</span>,sdjx)</span>,collapse=<span class="string">""</span>)</span>)</span></span><br><span class="line">  </span><br><span class="line">  print<span class="params">(paste<span class="params">(<span class="string">"N:"</span>,n,sep=<span class="string">""</span>)</span>)</span></span><br><span class="line"> </span><br><span class="line">  sam1&lt;-size.sample1<span class="params">(sdjx,conf.level=<span class="number">0.90</span>,<span class="number">200</span>)</span></span><br><span class="line">  print<span class="params">(paste<span class="params">(c<span class="params">(<span class="string">"总体方差已知：sam="</span>,sam1)</span>,collapse=<span class="string">""</span>)</span>)</span></span><br><span class="line">  s1&lt;-srswr<span class="params">(sam1,n)</span></span><br><span class="line">  sam1.jx&lt;-jx[s1==<span class="number">1</span>] </span><br><span class="line">  sam1.m&lt;-<span class="built_in">round</span><span class="params">(mean<span class="params">(sam1.jx)</span>,<span class="number">0</span>)</span></span><br><span class="line">  sam1.sd&lt;-<span class="built_in">round</span><span class="params">(sd<span class="params">(sam1.jx)</span>)</span></span><br><span class="line">  print<span class="params">(paste<span class="params">(c<span class="params">(<span class="string">"SAM1：样本均值："</span>,sam1.m,<span class="string">"样本标准差："</span>,sam1.sd)</span>,collapse=<span class="string">""</span>)</span>)</span></span><br><span class="line">  </span><br><span class="line">  sam2&lt;-size.sample2<span class="params">(sdjx,alpha=<span class="number">0.01</span>,<span class="number">370</span>,m=<span class="number">400</span>)</span> </span><br><span class="line">  print<span class="params">(paste<span class="params">(c<span class="params">(<span class="string">"总体方差未知：sam="</span>,sam2)</span>,collapse=<span class="string">""</span>)</span>)</span></span><br><span class="line">  s2&lt;-srswr<span class="params">(sam2,n)</span></span><br><span class="line">  sam2.jx&lt;-jx[s2==<span class="number">1</span>] </span><br><span class="line">  sam2.m&lt;-<span class="built_in">round</span><span class="params">(mean<span class="params">(sam2.jx)</span>,<span class="number">0</span>)</span></span><br><span class="line">  sam2.sd&lt;-<span class="built_in">round</span><span class="params">(sd<span class="params">(sam2.jx)</span>)</span></span><br><span class="line">  print<span class="params">(paste<span class="params">(c<span class="params">(<span class="string">"SAM2：样本均值："</span>,sam2.m,<span class="string">"样本标准差："</span>,sam2.sd)</span>,collapse=<span class="string">""</span>)</span>)</span></span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="三、R输出结果">三、R输出结果</h2><figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>] <span class="string">"医生Summary:"</span></span><br><span class="line">   <span class="name">Min</span>. <span class="number">1</span><span class="atom">st</span> <span class="name">Qu</span>.  <span class="name">Median</span>    <span class="name">Mean</span> <span class="number">3</span><span class="atom">rd</span> <span class="name">Qu</span>.    <span class="name">Max</span>. </span><br><span class="line">    <span class="number">238</span>    <span class="number">3374</span>    <span class="number">4956</span>    <span class="number">4762</span>    <span class="number">6104</span>   <span class="number">10020</span> </span><br><span class="line">[<span class="number">1</span>] <span class="string">"医生sd:1941"</span></span><br><span class="line">[<span class="number">1</span>] <span class="string">"N:828"</span></span><br><span class="line">[<span class="number">1</span>] <span class="string">"总体方差已知：sam=255"</span></span><br><span class="line">[<span class="number">1</span>] <span class="string">"SAM1：样本均值：4824样本标准差：2007"</span></span><br><span class="line">[<span class="number">1</span>] <span class="string">"总体方差未知：sam=347"</span></span><br><span class="line">[<span class="number">1</span>] <span class="string">"SAM2：样本均值：4780样本标准差：1813"</span></span><br><span class="line"></span><br><span class="line">[<span class="number">1</span>] <span class="string">"护士Summary:"</span></span><br><span class="line">   <span class="name">Min</span>. <span class="number">1</span><span class="atom">st</span> <span class="name">Qu</span>.  <span class="name">Median</span>    <span class="name">Mean</span> <span class="number">3</span><span class="atom">rd</span> <span class="name">Qu</span>.    <span class="name">Max</span>. </span><br><span class="line">    <span class="number">102</span>    <span class="number">2008</span>    <span class="number">3232</span>    <span class="number">3346</span>    <span class="number">4729</span>    <span class="number">8741</span> </span><br><span class="line">[<span class="number">1</span>] <span class="string">"护士sd:1787"</span></span><br><span class="line">[<span class="number">1</span>] <span class="string">"N:916"</span></span><br><span class="line">[<span class="number">1</span>] <span class="string">"总体方差已知：sam=216"</span></span><br><span class="line">[<span class="number">1</span>] <span class="string">"SAM1：样本均值：3381样本标准差：1896"</span></span><br><span class="line">[<span class="number">1</span>] <span class="string">"总体方差未知：sam=294"</span></span><br><span class="line">[<span class="number">1</span>] <span class="string">"SAM2：样本均值：3361样本标准差：1803"</span></span><br></pre></td></tr></table></figure>
+<h2 id="四、以医生结果做为说明">四、以医生结果做为说明</h2><p>从医生总体的概述可知道，医生的月均绩效工资为4762元，总体标准差为1941，共有828名医生。</p>
+<ul>
+<li>总体方差已知(标准差为1941)：我们只需选取255个样本，就可保证90%的可信度，样本的均值与总体的均值误差控制在正负200以内（相对与4762来说，相差200精度要求已很高了）<ul>
+<li>而模拟结果样本均值为4824，与总体误差只有60元左右</li>
+</ul>
+</li>
+<li>总体方差未知：我们需选取347个样本，就可保证90%的可信度，样本的均值与总体的均值误差控制在正负370以内<ul>
+<li>而模拟结果样本均值为4780，与总体误差只有20元左右</li>
+</ul>
+</li>
+</ul>
+<p>注：样本量的大小并不受总体N的影响，只与我们的精度要求及样本方差的大小有关，换句话说即便某区域的总体为10000而非828个医生时，样本只要选取255个或347同样能准确的计算出医生的绩效工资水平或收入水平。</p>
+<p>转载请注明：<br>原作者：赖韬(咨询师)<br>文章出处：<a href="http://tianyv.github.io" target="_blank" rel="external">http://tianyv.github.io</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/数据分析/">数据分析</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/医疗行业/">医疗行业</a>, <a href="/tags/数据分析/">数据分析</a>, <a href="/tags/管理咨询/">管理咨询</a>, <a href="/tags/绩效管理/">绩效管理</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more"></span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=3326447" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+ <nav id="pagination" >
+    
+    
+    <a href="/2015/11/22/mojoLogin/" class="alignright next" >下一页</a>
+    
+    <div class="clearfix"></div>
+</nav>
+
+
+
+<section id="comment">
+
+<!-- Duoshuo Comment BEGIN -->
+	<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"zippera"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- Duoshuo Comment END -->  
+
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:github.com/tianyv/tianyv.github.io">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/R/">R</a><small>2</small></li>
+  
+    <li><a href="/categories/perl/">perl</a><small>6</small></li>
+  
+    <li><a href="/categories/成本管理/">成本管理</a><small>1</small></li>
+  
+    <li><a href="/categories/数据分析/">数据分析</a><small>3</small></li>
+  
+    <li><a href="/categories/绩效管理/">绩效管理</a><small>5</small></li>
+  
+    <li><a href="/categories/项目分布/">项目分布</a><small>1</small></li>
+  
+    <li><a href="/categories/预算管理/">预算管理</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  <div class="widget tag">
+<h3 class="title">简介</h3>
+<ul class="entry">
+<li>博主：赖韬</li>
+<li>网名：aef25u</li>
+<li>行业：管理顾问、数据分析师</li>
+<li>单位：广州市**管理研究院</li>
+<li>想交友的朋友请联系我！</li>
+<li>QQ 号：215113227</li>
+<font color="blue">Email：laitaot@126.com</font>
+</ul>
+</div>
+
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><section>
+Theme of <a href="https://github.com/zippera/lightum">Lightum</a>, Improved from <a href="https://github.com/hexojs/hexo-theme-light">Light</a>, by <a href="/">zippera</a> 
+</section>
+<div class="clearfix"></div>
+</footer>
+  <script src="//libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body>
+</html>
+
+
+<a href="https://github.com/tianyv" target="_blank"><img style="position: absolute; top: 0; left: 0; border: 0;" src="/img/forkme_left_green_007200.png" alt="Fork me on GitHub"></a>
