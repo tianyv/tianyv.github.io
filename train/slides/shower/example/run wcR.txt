@@ -1,1 +1,0 @@
-c:/spark1.6/bin sparkR ./examples wcR.R local[1] f:/README.md
