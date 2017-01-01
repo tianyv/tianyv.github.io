@@ -251,12 +251,12 @@ on "test" =&gt; sub {
     requires "HTTP<span class="number">::</span>Request<span class="number">::C</span>ommon" =&gt; "0"<span class="comment">;</span>
 }<span class="comment">;</span>
 </code></pre><h3 id="2-2在cpanfile所在目录下，执行如下命令">2.2在cpanfile所在目录下，执行如下命令</h3><pre><code>carton <span class="keyword">install</span>
-</code></pre><p>运行命令后会在目录下新生成一个名小 cpanfile.snapshot的文件。这个文件里会记录你这次安装的时候的模块的确切版本，这样你通过 github 等方式共享给其他人、发布到服务器等的时候，再用下面的命令安装就可以同样做到安装完全一致的版本的模块了：</p>
+</code></pre><p>运行命令后会在目录下新生成一个名为 cpanfile.snapshot的文件。这个文件里会记录你本次安装的模块确切版本，这样你通过 github 等方式共享给其他人、发布到服务器等的时候，再用下面的命令就可以实现安装完全一致版本的模块了：</p>
 <pre><code>carton <span class="operator"><span class="keyword">install</span> <span class="comment">--deployment</span></span>
-</code></pre><h3 id="2-3_利用Carton启动Dancer2项目">2.3 利用Carton启动Dancer2项目</h3><p>Carton 默认是安装到项目当前目录下的 local/ 子目录内。所以，先要进入项目目录再运行以下命令：</p>
+</code></pre><h3 id="2-3_利用Carton启动Dancer2项目">2.3 利用Carton启动Dancer2项目</h3><p>Carton 默认安装到项目当前目录下的 local/ 子目录内。所以，先要进入项目目录再运行以下命令：</p>
 <pre><code><span class="keyword">cd</span> <span class="keyword">E</span>:\MyApp
 carton exec plackup bin/<span class="keyword">app</span>.psgi
-</code></pre><h3 id="2-4打包">2.4打包</h3><p>carton 有专门的一个 bundle 命令。把之前 install 在 local/ 里的模块，复制到 vendor/cache 目录下。然后通过下面命令来安装：</p>
+</code></pre><h3 id="2-4打包">2.4打包</h3><p>Carton 有专门的一个 bundle 命令。把之前 install 在 local/ 里的模块，复制到 vendor/cache 目录下。然后通过下面命令来安装：</p>
 <pre><code>carton <span class="operator"><span class="keyword">install</span> <span class="comment">--cached</span></span>
 </code></pre><p>主要用于解决跨平台和系统部署问题,要点在于：carton 复制到 vendor/cache 目录下的，不是安装好的模块，而是各模块的 .tar.gz 包,这样运行以上命令会重新走一遍编译过程。</p>
 <p>转载请注明：<br>原作者：赖韬(咨询师)<br>文章出处：<a href="http://tianyv.github.io" target="_blank" rel="external">http://tianyv.github.io</a></p>
