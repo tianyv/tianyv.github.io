@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Web::Scraper | LaiTao&#39;s blog</title>
+  <title>Carton 管理模块依赖 | LaiTao&#39;s blog</title>
   <meta name="author" content="赖 韬">
   
   <meta name="description" content="管理咨询 管理顾问 绩效管理 数据分析 R perl LaTex">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="Carton 管理模块依赖"/>
   <meta property="og:site_name" content="LaiTao&#39;s blog"/>
 
   
@@ -202,25 +202,134 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title tag">Web::Scraper</h2>
-
-
-  <div class="archive">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
     
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2015-07-17T11:03:56.000Z"><a href="/2015/07/17/perlScraper/">2015-07-17</a></time>
-            
-              <h1 class="title"><a href="/2015/07/17/perlScraper/">Web::Scraper抓取网页信息</a></h1>
-            
-          </header>
-        </div>
-      </article>
+      <img src="">
     
   </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-01-01T17:02:02.000Z"><a href="/2017/01/02/perlcarton/">2017-01-02</a></time>
+      
+      
+  
+    <h1 class="title">Carton 管理模块依赖</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>曾在ChinaUnix论坛上写过关于Dancer的入门教程，后来由于Dancer版本的变更，有下载我所上传源码的网友反馈运行出错，后来虽然找到了原因并更新上传，但感觉挺麻烦的，后来在 Cpan 上找到了Carton,所以现在在用Dancer2写网站时增加了Carton作为管理模块依赖的工具。</p>
+<a id="more"></a>
+<h2 id="附本人在ChinaUnix论坛发的Dancer入门教程：">附本人在ChinaUnix论坛发的Dancer入门教程：</h2><ul>
+<li><a href="http://bbs.chinaunix.net/thread-1753507-1-1.html" target="_blank" rel="external">本人用Dancer框架写的个人网站源码</a></li>
+</ul>
+<h2 id="一、安装Carton">一、安装Carton</h2><p>Modern perl使用的 Carton 学习了 Ruby 的 bundle 命令,同时也学来了类Gemfile的方式来书写与管理模块依赖，在Catton中我们使用cpanfile。</p>
+<h3 id="1-1安装模块">1.1安装模块</h3><pre><code><span class="title">cpanm</span>  Carton
+</code></pre><h2 id="二、Carton_用法">二、Carton 用法</h2><h3 id="2-1在项目文件夹下书写cpanfile">2.1在项目文件夹下书写cpanfile</h3><pre><code>requires "Moo" =&gt; "<span class="number">2.003000</span>"<span class="comment">;</span>
+requires "Dancer2" =&gt; "<span class="number">0.204001</span>"<span class="comment">;</span>
+requires "Dancer<span class="number">2::</span>Plugin<span class="number">::DB</span>IC"<span class="comment">;</span>
+requires "Template"<span class="comment">;</span>
+requires "YAML"<span class="comment">;</span>
+recommends "YAML<span class="number">::</span>XS"<span class="comment">;</span>
+recommends "URL<span class="number">::E</span>nco<span class="number">de::</span>XS"<span class="comment">;</span>
+recommends "HTTP<span class="number">::</span>Parser<span class="number">::</span>XS"<span class="comment">;</span>
+
+on "test" =&gt; sub {
+    requires "Test<span class="number">::</span>More"            =&gt; "0"<span class="comment">;</span>
+    requires "HTTP<span class="number">::</span>Request<span class="number">::C</span>ommon" =&gt; "0"<span class="comment">;</span>
+}<span class="comment">;</span>
+</code></pre><h3 id="2-2在cpanfile所在目录下，执行如下命令">2.2在cpanfile所在目录下，执行如下命令</h3><pre><code>carton <span class="keyword">install</span>
+</code></pre><p>运行命令后会在目录下新生成一个名小 cpanfile.snapshot的文件。这个文件里会记录你这次安装的时候的模块的确切版本，这样你通过 github 等方式共享给其他人、发布到服务器等的时候，再用下面的命令安装就可以同样做到安装完全一致的版本的模块了：</p>
+<pre><code>carton <span class="operator"><span class="keyword">install</span> <span class="comment">--deployment</span></span>
+</code></pre><h3 id="2-3_利用Carton启动Dancer2项目">2.3 利用Carton启动Dancer2项目</h3><p>Carton 默认是安装到项目当前目录下的 local/ 子目录内。所以，先要进入项目目录再运行以下命令：</p>
+<pre><code><span class="keyword">cd</span> <span class="keyword">E</span>:\MyApp
+carton exec plackup bin/<span class="keyword">app</span>.psgi
+</code></pre><h3 id="2-4打包">2.4打包</h3><p>carton 有专门的一个 bundle 命令。把之前 install 在 local/ 里的模块，复制到 vendor/cache 目录下。然后通过下面命令来安装：</p>
+<pre><code>carton <span class="operator"><span class="keyword">install</span> <span class="comment">--cached</span></span>
+</code></pre><p>主要用于解决跨平台和系统部署问题,要点在于：carton 复制到 vendor/cache 目录下的，不是安装好的模块，而是各模块的 .tar.gz 包,这样运行以上命令会重新走一遍编译过程。</p>
+<p>转载请注明：<br>原作者：赖韬(咨询师)<br>文章出处：<a href="http://tianyv.github.io" target="_blank" rel="external">http://tianyv.github.io</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/perl/">perl</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/perl/">perl</a>, <a href="/tags/简介/">简介</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more"></span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=3326447" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+ <nav id="pagination" >
+    
+    
+    <a href="/2015/12/09/jxjfql/" class="alignright next" >下一页</a>
+    
+    <div class="clearfix"></div>
+</nav>
+
+
+
+<section id="comment">
+
+<!-- Duoshuo Comment BEGIN -->
+	<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"zippera"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- Duoshuo Comment END -->  
+
+  
+</section>
+
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">

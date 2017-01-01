@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/tianyv/tianyv.github.io/"/>
-  <updated>2015-12-10T07:36:15.144Z</updated>
+  <updated>2017-01-01T17:49:43.446Z</updated>
   <id>https://github.com/tianyv/tianyv.github.io/</id>
   
   <author>
@@ -14,6 +14,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Carton 管理模块依赖</title>
+    <link href="https://github.com/tianyv/tianyv.github.io/2017/01/02/perlcarton/"/>
+    <id>https://github.com/tianyv/tianyv.github.io/2017/01/02/perlcarton/</id>
+    <published>2017-01-01T17:02:02.000Z</published>
+    <updated>2017-01-01T17:49:43.446Z</updated>
+    
+    <content type="html"><![CDATA[<p>曾在ChinaUnix论坛上写过关于Dancer的入门教程，后来由于Dancer版本的变更，有下载我所上传源码的网友反馈运行出错，后来虽然找到了原因并更新上传，但感觉挺麻烦的，后来在 Cpan 上找到了Carton,所以现在在用Dancer2写网站时增加了Carton作为管理模块依赖的工具。</p>
+<a id="more"></a>
+<h2 id="附本人在ChinaUnix论坛发的Dancer入门教程：">附本人在ChinaUnix论坛发的Dancer入门教程：</h2><ul>
+<li><a href="http://bbs.chinaunix.net/thread-1753507-1-1.html" target="_blank" rel="external">本人用Dancer框架写的个人网站源码</a></li>
+</ul>
+<h2 id="一、安装Carton">一、安装Carton</h2><p>Modern perl使用的 Carton 学习了 Ruby 的 bundle 命令,同时也学来了类Gemfile的方式来书写与管理模块依赖，在Catton中我们使用cpanfile。</p>
+<h3 id="1-1安装模块">1.1安装模块</h3><pre><code><span class="title">cpanm</span>  Carton
+</code></pre><h2 id="二、Carton_用法">二、Carton 用法</h2><h3 id="2-1在项目文件夹下书写cpanfile">2.1在项目文件夹下书写cpanfile</h3><pre><code>requires "Moo" =&gt; "<span class="number">2.003000</span>"<span class="comment">;</span>
+requires "Dancer2" =&gt; "<span class="number">0.204001</span>"<span class="comment">;</span>
+requires "Dancer<span class="number">2::</span>Plugin<span class="number">::DB</span>IC"<span class="comment">;</span>
+requires "Template"<span class="comment">;</span>
+requires "YAML"<span class="comment">;</span>
+recommends "YAML<span class="number">::</span>XS"<span class="comment">;</span>
+recommends "URL<span class="number">::E</span>nco<span class="number">de::</span>XS"<span class="comment">;</span>
+recommends "HTTP<span class="number">::</span>Parser<span class="number">::</span>XS"<span class="comment">;</span>
+
+on "test" =&gt; sub {
+    requires "Test<span class="number">::</span>More"            =&gt; "0"<span class="comment">;</span>
+    requires "HTTP<span class="number">::</span>Request<span class="number">::C</span>ommon" =&gt; "0"<span class="comment">;</span>
+}<span class="comment">;</span>
+</code></pre><h3 id="2-2在cpanfile所在目录下，执行如下命令">2.2在cpanfile所在目录下，执行如下命令</h3><pre><code>carton <span class="keyword">install</span>
+</code></pre><p>运行命令后会在目录下新生成一个名小 cpanfile.snapshot的文件。这个文件里会记录你这次安装的时候的模块的确切版本，这样你通过 github 等方式共享给其他人、发布到服务器等的时候，再用下面的命令安装就可以同样做到安装完全一致的版本的模块了：</p>
+<pre><code>carton <span class="operator"><span class="keyword">install</span> <span class="comment">--deployment</span></span>
+</code></pre><h3 id="2-3_利用Carton启动Dancer2项目">2.3 利用Carton启动Dancer2项目</h3><p>Carton 默认是安装到项目当前目录下的 local/ 子目录内。所以，先要进入项目目录再运行以下命令：</p>
+<pre><code><span class="keyword">cd</span> <span class="keyword">E</span>:\MyApp
+carton exec plackup bin/<span class="keyword">app</span>.psgi
+</code></pre><h3 id="2-4打包">2.4打包</h3><p>carton 有专门的一个 bundle 命令。把之前 install 在 local/ 里的模块，复制到 vendor/cache 目录下。然后通过下面命令来安装：</p>
+<pre><code>carton <span class="operator"><span class="keyword">install</span> <span class="comment">--cached</span></span>
+</code></pre><p>主要用于解决跨平台和系统部署问题,要点在于：carton 复制到 vendor/cache 目录下的，不是安装好的模块，而是各模块的 .tar.gz 包,这样运行以上命令会重新走一遍编译过程。</p>
+<p>转载请注明：<br>原作者：赖韬(咨询师)<br>文章出处：<a href="http://tianyv.github.io" target="_blank" rel="external">http://tianyv.github.io</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;曾在ChinaUnix论坛上写过关于Dancer的入门教程，后来由于Dancer版本的变更，有下载我所上传源码的网友反馈运行出错，后来虽然找到了原因并更新上传，但感觉挺麻烦的，后来在 Cpan 上找到了Carton,所以现在在用Dancer2写网站时增加了Carton作为管理模块依赖的工具。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="perl" scheme="https://github.com/tianyv/tianyv.github.io/categories/perl/"/>
+    
+    
+      <category term="perl" scheme="https://github.com/tianyv/tianyv.github.io/tags/perl/"/>
+    
+      <category term="简介" scheme="https://github.com/tianyv/tianyv.github.io/tags/%E7%AE%80%E4%BB%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>绩效的简与繁、情与理</title>
@@ -860,7 +914,7 @@
     <link href="https://github.com/tianyv/tianyv.github.io/2015/06/15/perlintro/"/>
     <id>https://github.com/tianyv/tianyv.github.io/2015/06/15/perlintro/</id>
     <published>2015-06-15T14:17:05.000Z</published>
-    <updated>2016-12-08T06:08:54.757Z</updated>
+    <updated>2016-12-08T07:19:55.794Z</updated>
     
     <content type="html"><![CDATA[<p>perl是本人日常工作使用的神器之一，自2008年与perl结缘至今，协助我解决了不少工作中的问题，特别是一些重复和枯燥的工作。</p>
 <h2 id="本人在ChinaUnix上的perl博客：">本人在ChinaUnix上的perl博客：</h2><p><a href="http://blog.chinaunix.net/uid/22674875.html" target="_blank" rel="external">http://blog.chinaunix.net/uid/22674875.html</a></p>
@@ -984,69 +1038,6 @@ dmake install
     <summary type="html">
     
       &lt;p&gt;本节介绍绩效分配的两种模式。还有就是在改革过程中是体现战略导向以领导决策为主，还是重在体现公平，员工群策群力。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="绩效管理" scheme="https://github.com/tianyv/tianyv.github.io/categories/%E7%BB%A9%E6%95%88%E7%AE%A1%E7%90%86/"/>
-    
-    
-      <category term="医疗行业" scheme="https://github.com/tianyv/tianyv.github.io/tags/%E5%8C%BB%E7%96%97%E8%A1%8C%E4%B8%9A/"/>
-    
-      <category term="管理咨询" scheme="https://github.com/tianyv/tianyv.github.io/tags/%E7%AE%A1%E7%90%86%E5%92%A8%E8%AF%A2/"/>
-    
-      <category term="管理基础" scheme="https://github.com/tianyv/tianyv.github.io/tags/%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/"/>
-    
-      <category term="绩效管理" scheme="https://github.com/tianyv/tianyv.github.io/tags/%E7%BB%A9%E6%95%88%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>绩效管理基本理论</title>
-    <link href="https://github.com/tianyv/tianyv.github.io/2015/05/31/jxjc/"/>
-    <id>https://github.com/tianyv/tianyv.github.io/2015/05/31/jxjc/</id>
-    <published>2015-05-31T13:32:52.000Z</published>
-    <updated>2015-12-10T08:06:58.688Z</updated>
-    
-    <content type="html"><![CDATA[<p>从2007年毕业到进入管理咨询行业（医疗行业的管理咨询），再到成长为咨询师独立负责项目已有8年。一直以来忙着于学习新知识与积累经验，因项目而在全国各处奔波，眨眼间已到而立之年，想着是时候写点总结或随笔，记录点知识或分享点经验，因此建立了这个Blog，而绩效管理基本理论作为了我的第一编博文。</p>
-<a id="more"></a>
-<h2 id="一、绩效的定义">一、绩效的定义</h2><p><strong>绩效</strong>：组织的业绩（对外成果）和效率（内部成果） </p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是我认为对绩效一词最简单最精确的描述。</span><br></pre></td></tr></table></figure>
-<h2 id="二、需使用到的心理学理论">二、需使用到的心理学理论</h2><h3 id="2-1双因素理论"><a href="http://baike.baidu.com/view/20694.htm" target="_blank" rel="external">2.1双因素理论</a></h3><ul>
-<li><strong>保健因素</strong></li>
-<li><strong>激励因素</strong> </li>
-</ul>
-<p><img src="/img/jx/01-1twojlys.png" width="450"><br><img src="/img/jx/01-2qjll.png" width="450"></p>
-<figure class="highlight fix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">提高执行力的三要素：意愿、技能、承诺</span><br><span class="line">愿景 + 承诺 </span>=<span class="string"> 聚焦</span><br><span class="line">聚焦 + 行动 = 结果 ≈ 预期结果</span></span><br></pre></td></tr></table></figure>
-<p>固定工资属于保健因素，绩效工资属于激励因素，如果保健因素得不到满足，员工容易产生不满情绪，再多的激励因素也产生不了激励作用。  </p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">一般固定工资占员工收入的<span class="number">35</span><span class="preprocessor">%</span>至<span class="number">50</span><span class="preprocessor">%</span>较为合理。</span><br><span class="line">固定工资与绩效工资比重失衡的例子</span><br><span class="line">    社区卫生院的绩效工资分基础性绩效与<span class="number">30</span><span class="preprocessor">%</span>奖励性绩效，基础性绩效是变相的固定工资，导</span><br><span class="line">致绩效工资比重过小，所起激励作用很弱。</span><br><span class="line">    有些民营综合性基层医院，固定工资比重很小，员工不满情绪多、冲击医院文化，奖金很</span><br><span class="line">高但员工积极性却不高、没有归属感，离职率高，更留不住骨干。</span><br></pre></td></tr></table></figure>
-<h3 id="2-2公平理论"><a href="http://baike.baidu.com/view/46978.htm" target="_blank" rel="external">2.2公平理论</a></h3><ul>
-<li><strong>纵向比较</strong>：现在报酬与付出的比值与过去报酬与付出的比值进行比较  <ul>
-<li>实施绩效改革的单位则表现为：改革前后的比较  </li>
-</ul>
-</li>
-<li><strong>横向比较</strong>：自已报酬与付出的比值与他人报酬与付出的比值进行比较   </li>
-</ul>
-<p>公平的内涵：规则起点平等、机会均等、结果相对合理<br>影响公平性判断的要素：个人主观判断、个人所持有的公平标准  </p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">平等与公平是有差异的</span><br><span class="line">法律面前人人平等，说明平等是不会因人而异的。</span><br><span class="line">说到公平，大家总是说：“我认为这不公平”。说明公平是受个人主观意识决定的，是要体现出</span><br><span class="line">差异的，在绩效工资分配过程中，付出多的人认为自已的报酬要比付出少的人多才是公平的。</span><br><span class="line">绩效改革关键成功要点：改变原有个人所持的公平标准，尽量统一员工对公平标准的认识，或</span><br><span class="line">减少差异</span><br></pre></td></tr></table></figure>
-<h3 id="2-3前景理论"><a href="http://baike.baidu.com/view/1205091.htm" target="_blank" rel="external">2.3前景理论</a></h3><p>这是个风险下决策的描述性模型 </p>
-<ul>
-<li><strong>确定效应</strong>（面对确定的获得，不愿冒风险）   </li>
-<li><strong>反射效应</strong>（面对失去，更加倾向于冒险）  </li>
-<li><strong>损失规避</strong>（面对损失的痛苦感要大大超过面对获得的快乐感）  </li>
-<li><strong>参照依赖</strong>（多数人对得失的判断往往根据参照点决定，在1与2的选择中，大部分人会选择前者）<br>  1)、其他人一年挣6万元你年收入7万元<br>  2)、其他人一年挣9万元你年收入8万元</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">提出绩效设计原则：</span><br><span class="line">尊重历史，增量改革</span><br><span class="line">管理者与员工要分类设计</span><br></pre></td></tr></table></figure>
-<h2 id="三、企业生命周期理论">三、<a href="http://baike.baidu.com/view/1444314.htm" target="_blank" rel="external">企业生命周期理论</a></h2><p><img src="/img/jx/01-3smzq.png" width="450"></p>
-<p>处于成长期初期的医院，有以下特点：<br>规模效应不明显，人力成本和药品成本为主要成本，是医院处于亏损或结余不多的主要原因<br>对于民营医院，房屋、设备折旧和利息同样为其主要成本负担<br>技术骨干紧缺，人才引进困难，技术难于有较大提升<br>管理水平一般，中层管理员工管理水平参差不齐</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">绩效工资为提高员工积极性的关键因素</span><br><span class="line">绩效分配方案应体现：</span><br><span class="line">    简单、因外部环境变化能快速调整导向作用</span><br><span class="line">    效率优先，拉开分配差距，释放优势生产力</span><br><span class="line">    临床一线基层员工以过程指标进行激励</span><br><span class="line">    人力成本合理增长，总额可控</span><br><span class="line">    改革初期分配规则起点平等、机会均等，但不追求所有员工均认可的结果公平</span><br></pre></td></tr></table></figure>
-<p>处于成熟期的医院，有以下特点：<br>品牌效应已形成，患者主动就医<br>人才队伍稳定，对人才的吸引力强<br>技术领先<br>中层管理员工水平较高<br>人力成本30%左右</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">医院重点在于通过医院文化影响员工，通过其他激励因素激励员工，如工作成就感、职业发展及</span><br><span class="line">晋升、个人价值体现等。此时绩效工资并非激励员工的唯一因素。</span><br><span class="line">绩效分配方案应体现：</span><br><span class="line">    因外部环境变化对医院影响小，可以采用综合评价指标进行考核分配</span><br><span class="line">    缩小分配差距，更注重分配的公平</span><br><span class="line">    以结果指标为导向，同时体现公益性</span><br><span class="line">可应用平衡计分卡设计绩效分配方案</span><br></pre></td></tr></table></figure>
-<p>转载请注明：<br>原作者：赖韬(咨询师)<br>文章出处：<a href="http://tianyv.github.io" target="_blank" rel="external">http://tianyv.github.io</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;从2007年毕业到进入管理咨询行业（医疗行业的管理咨询），再到成长为咨询师独立负责项目已有8年。一直以来忙着于学习新知识与积累经验，因项目而在全国各处奔波，眨眼间已到而立之年，想着是时候写点总结或随笔，记录点知识或分享点经验，因此建立了这个Blog，而绩效管理基本理论作为了我的第一编博文。&lt;/p&gt;
     
     </summary>
     
