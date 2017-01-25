@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Carton 管理模块依赖 | LaiTao&#39;s blog</title>
+  <title>中庸智慧引发的绩效管理思考 | LaiTao&#39;s blog</title>
   <meta name="author" content="赖 韬">
   
   <meta name="description" content="管理咨询 管理顾问 绩效管理 数据分析 R perl LaTex">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Carton 管理模块依赖"/>
+  <meta property="og:title" content="中庸智慧引发的绩效管理思考"/>
   <meta property="og:site_name" content="LaiTao&#39;s blog"/>
 
   
@@ -220,45 +220,29 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2017-01-01T17:02:02.000Z"><a href="/2017/01/02/perlcarton/">2017-01-02</a></time>
+        <time datetime="2017-01-24T18:35:57.000Z"><a href="/2017/01/25/jxzyzd/">2017-01-25</a></time>
       
       
   
-    <h1 class="title">Carton 管理模块依赖</h1>
+    <h1 class="title">中庸智慧引发的绩效管理思考</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>曾在ChinaUnix论坛上写过关于Dancer的入门教程，后来由于Dancer版本的变更，有下载我所上传源码的网友反馈运行出错，后来虽然找到了原因并更新上传，但感觉挺麻烦的，后来在 Cpan 上找到了Carton,所以现在在用Dancer2写网站时增加了Carton作为管理模块依赖的工具。</p>
-<a id="more"></a>
-<h2 id="附本人在ChinaUnix论坛发的Dancer入门教程：">附本人在ChinaUnix论坛发的Dancer入门教程：</h2><ul>
-<li><a href="http://bbs.chinaunix.net/thread-1753507-1-1.html" target="_blank" rel="external">本人用Dancer框架写的个人网站源码</a></li>
-</ul>
-<h2 id="一、安装Carton">一、安装Carton</h2><p>Modern perl使用的 Carton 学习了 Ruby 的 bundle 命令,同时也学来了类Gemfile的方式来书写与管理模块依赖，在Catton中我们使用cpanfile。</p>
-<h3 id="1-1安装模块">1.1安装模块</h3><pre><code><span class="title">cpanm</span>  Carton
-</code></pre><h2 id="二、Carton_用法">二、Carton 用法</h2><h3 id="2-1在项目文件夹下书写cpanfile">2.1在项目文件夹下书写cpanfile</h3><pre><code>requires "Moo" =&gt; "<span class="number">2.003000</span>"<span class="comment">;</span>
-requires "Dancer2" =&gt; "<span class="number">0.204001</span>"<span class="comment">;</span>
-requires "Dancer<span class="number">2::</span>Plugin<span class="number">::DB</span>IC"<span class="comment">;</span>
-requires "Template"<span class="comment">;</span>
-requires "YAML"<span class="comment">;</span>
-recommends "YAML<span class="number">::</span>XS"<span class="comment">;</span>
-recommends "URL<span class="number">::E</span>nco<span class="number">de::</span>XS"<span class="comment">;</span>
-recommends "HTTP<span class="number">::</span>Parser<span class="number">::</span>XS"<span class="comment">;</span>
-
-on "test" =&gt; sub {
-    requires "Test<span class="number">::</span>More"            =&gt; "0"<span class="comment">;</span>
-    requires "HTTP<span class="number">::</span>Request<span class="number">::C</span>ommon" =&gt; "0"<span class="comment">;</span>
-}<span class="comment">;</span>
-</code></pre><h3 id="2-2在cpanfile所在目录下，执行如下命令">2.2在cpanfile所在目录下，执行如下命令</h3><pre><code>carton <span class="keyword">install</span>
-</code></pre><p>运行命令后会在目录下新生成一个名为 cpanfile.snapshot的文件。这个文件里会记录你本次安装的模块确切版本，这样你通过 github 等方式共享给其他人、发布到服务器等的时候，再用下面的命令就可以实现安装完全一致版本的模块了：</p>
-<pre><code>carton <span class="operator"><span class="keyword">install</span> <span class="comment">--deployment</span></span>
-</code></pre><h3 id="2-3_利用Carton启动Dancer2项目">2.3 利用Carton启动Dancer2项目</h3><p>Carton 默认安装到项目当前目录下的 local/ 子目录内。所以，先要进入项目目录再运行以下命令：</p>
-<pre><code><span class="keyword">cd</span> <span class="keyword">E</span>:\MyApp
-carton exec plackup bin/<span class="keyword">app</span>.psgi
-</code></pre><h3 id="2-4打包">2.4打包</h3><p>Carton 有专门的一个 bundle 命令。把之前 install 在 local/ 里的模块，复制到 vendor/cache 目录下。然后通过下面命令来安装：</p>
-<pre><code>carton <span class="operator"><span class="keyword">install</span> <span class="comment">--cached</span></span>
-</code></pre><p>主要用于解决跨平台和系统部署问题,要点在于：carton 复制到 vendor/cache 目录下的，不是安装好的模块，而是各模块的 .tar.gz 包,这样运行以上命令会重新走一遍编译过程。</p>
+        <p>忙忙碌碌，转眼又到年底，不知什么时候开始，每到年底总喜欢回顾过往，想起这一年的咨询经历，没成想，“叩其两端而执其中”的中庸之道给了我一些感触。<br><a id="more"></a></p>
+<h2 id="一、管理，何为取其中">一、管理，何为取其中</h2><pre><code>在做管理咨询过程中，经常听到院长这么说：
+</code></pre><p>现在院长越来越难当了，究其原因，多数院长说：一方面政府要求医院要体现公益性，另一方面又要求医院自主经营，自负盈亏。<br>从“二元对立”论来看，这是两个矛盾，鱼与熊掌不能兼得，但从中国传统“一分为三”的整体认识论来看，其实关键是要找准这个<strong>中</strong>，而这个中本人认为是<strong>医生要有工作积极性，要有提升技术的动力</strong>；作为医院要有机制让医生获得提升技术的机会与途径，使得医院技术力量不断提升，医疗安全得到保障；而最终病人得到有效地救治、病痛得到缓解或减轻。这或许可以使得鱼与熊掌在某种意义上来说得以兼得。</p>
+<pre><code>院长认为医院的绩效工资水平已经不低了，但员工却仍然不满意，对提高报酬的期望很高。  
+</code></pre><p>这要分两种情况来对待，一是如果医院确实有空间，并且与周边同行相比，员工收入水平持平或略高不多，可取的做法是降低员工期望的同量，还可考虑适当提高员工的绩效工资水平。<br>二是如果医院确实已经没有增加绩效的空间了（有可能是受政策限制，又或者可能是没法拿出更多的钱难来发绩效，因为账上已没多少钱了），上边提高绩效工资水平减少期望落差的做法就不可行了，这时管理的取其中本人认为是<strong>找准中层管理员工的个性化动机</strong>，而对于<strong>普通员工则是识别他们的公共工作动机</strong>（如新入职员工可能会将培训或获得锻炼的机会做为愿意承担责任的公共工作动机），看看是否有可能满足他们，因为德鲁克认为“证据显示，对奖金感到满意未必足以形成正面的工作动机。只有当员工出于其他动机而愿意承担责任时，金钱上的奖赏才能发挥激励作用。”</p>
+<h2 id="二、如何取舍，如何平衡">二、如何取舍，如何平衡</h2><pre><code>经常有院长说，我给员工多发了钱了，但为什么大家反而意见更大  
+</code></pre><p>究其原因，原来是钱发得不合理。没钱发时院长头痛，有钱了怎么发又是院长面临的另一道难题。<br>其实首先要明确能多发多少，这钱的作用是用来加大保健作用还是用来加大激励作用。<br>一是如果钱不多，而基本工资所占比重较小，那这钱可以以岗位绩效的形式发下去，主要体现员工的职称及职务，加大薪酬所起的保健作用。<br>二是如果钱多，而绩效工资所占比例不足或刚超过50%左右，并且员工积极性不高，那这钱可以加入绩效工资总量，按工作量拉开分配差距，加大薪酬所起的激励作用。<br>如果是其他情况，要不以年终奖或增设其他专项奖励的方式发下去，要不不如不发。</p>
+<pre><code>绩效改革是维持稳定好，还是破旧立新好   
+</code></pre><p>首先作为管理者需明确改革过程中不可能不产生矛盾，也不可能做到让所有的利益群体都满意。<br>其次绩效改革是利益的重新再分配，或在原来合理的基础上分配地更加公平或更有效，但均将打破现有平衡；同时绩效改革需拉开差距才能带来效率，但有了差距，就有了比较，员工又很容易产生不公平感，尤其是在信息不对称的情况下。<br>所以作为管理者要正视“希望改革可获得更多员工的<strong>认同</strong>“”这一心理预期，同时也要有不怕得罪某个人或某个利益群体的思想准备，尽可能地坚持原则。关键是要识别出本次改革的撬动者是到底是谁，一切以这个群体为优先，当这个群体都还未得到满足前其他群体的利益诉求可暂放在后，有合适时机时再予以体现。</p>
+<pre><code>绩效要拉开群体差距，但差距控制在多少才合适，如何控制
+</code></pre><p>这个问题不展开说，只需明确两点：一、医生及业务中层是绩效改革是主要的撬动者；二、以临床第一，医技第二（护理群体与医技持平），行政后勤第三为原则<br>而作为科室二次分配，除了要控制好科主任与医生的差距外，还有个至关重要、需要避免出现的情况是：分配过程中不要让医生认为他们少拿是因为主任多拿了导致的，反之亦然。</p>
+<pre><code>科主任与医生的绩效分配是否要有差别，差别在哪
+</code></pre><p>医生的绩效工资要与过程指标相关，以过程激励为主；科主任的绩效要关注结果指标，体现结果导向<br>医生以过程激励容易出现增劳不增效，出工不出力的不良现象，所以需科主任以结果导向来监督管理科室，以达到取中的平衡效果<br>如果科主任的绩效工资不与结果指标相关连，那科主任则会利用他手中的权力与资源从过程中获取更多的额外利益，给管理带来很多问题，如成本居高不下，把住手术刀，科室技术得不到提升等。</p>
 <p>转载请注明：<br>原作者：赖韬(咨询师)<br>文章出处：<a href="http://tianyv.github.io" target="_blank" rel="external">http://tianyv.github.io</a></p>
 
       
@@ -268,13 +252,13 @@ carton exec plackup bin/<span class="keyword">app</span>.psgi
         
   
   <div class="categories">
-    <a href="/categories/perl/">perl</a>
+    <a href="/categories/绩效管理/">绩效管理</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/perl/">perl</a>, <a href="/tags/简介/">简介</a>
+    <a href="/tags/医疗行业/">医疗行业</a>, <a href="/tags/管理咨询/">管理咨询</a>, <a href="/tags/管理基础/">管理基础</a>, <a href="/tags/绩效管理/">绩效管理</a>
   </div>
 
 <!-- Baidu Button BEGIN -->
@@ -302,10 +286,8 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 
  <nav id="pagination" >
     
-    <a href="/2017/01/25/jxzyzd/" class="alignleft prev" >上一页</a>
     
-    
-    <a href="/2015/12/09/jxjfql/" class="alignright next" >下一页</a>
+    <a href="/2017/01/02/perlcarton/" class="alignright next" >下一页</a>
     
     <div class="clearfix"></div>
 </nav>
