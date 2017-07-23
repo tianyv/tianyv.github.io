@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/tianyv/tianyv.github.io/"/>
-  <updated>2017-04-03T15:48:03.232Z</updated>
+  <updated>2017-07-23T22:51:56.596Z</updated>
   <id>https://github.com/tianyv/tianyv.github.io/</id>
   
   <author>
@@ -14,6 +14,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OKR与KPI异同之我见</title>
+    <link href="https://github.com/tianyv/tianyv.github.io/2017/07/22/jxokr/"/>
+    <id>https://github.com/tianyv/tianyv.github.io/2017/07/22/jxokr/</id>
+    <published>2017-07-22T01:11:30.000Z</published>
+    <updated>2017-07-23T22:51:56.596Z</updated>
+    
+    <content type="html"><![CDATA[<p>之前在《三种理论假设下的绩效管理》中介绍过KPI,同时网上也有KPI绩效主义毁了索尼的论述，最近又看了一编文章《为何KPI毁了索尼，而OKR成就了谷歌》，然后结合自己的理解，总结了下两者的异同。<br><a id="more"></a><br>附原文：<a href="http://mp.weixin.qq.com/s/uHq2FD3eJ_JaB8yHATNpEA" target="_blank" rel="external">为何KPI毁了索尼，而OKR成就了谷歌</a> </p>
+<h2 id="一、OKR与KPI本质的异同：">一、OKR与KPI本质的异同：</h2><p>同为结果绩效论，同为指标，根本的区别在于OKR是目标+关键成果，不管设计之初还是执行过程中始终聚焦关键成果；而KPI是性能（维度）+关键指标，设计之初关注各维度目标，执行过程中关注指标。</p>
+<pre><code>OKR能更成功，简单地用一句话来说就是：不记初衷，方得本心！
+</code></pre><p>正是以上的根本差异，导致操作的关注点也有极大的不同。<br>OKR由于聚焦于关键成果，方向不会发生错误，并且组织战略调整或外部环境发生变化后，提醒管理者关键成果要作出改变，如果不作调整，在绩效评价时同样能发现方向性错误；而KPI,由于操作时聚焦于指标，导致管理者花费大量时间去考核员工是否达到了指标的要求，有时指标达到了，但可能组织目标没达成，又或者组织目标已发生变更，而KPI仍指引着组织按原来的目标，在错误的路上越走越远。</p>
+<pre><code>德鲁克曾严厉警告过管理者：只要我们的经理人一天不放弃将绩效评估用于控制员工，绩效管理注定就不会成功。
+</code></pre><h2 id="二、根本的不同导致的不同行为及后果">二、根本的不同导致的不同行为及后果</h2><p>OKR是负向清单制，即“法不禁止即可为”</p>
+<ul>
+<li>组织只指明方向，并不限制管理者走哪条路去达到终点（因KPI设计者的心智模型是：结果更重要，过程中采取哪种方法不用深究）<ul>
+<li>更能调动管理者的能动性及发挥其创造力</li>
+</ul>
+</li>
+<li>让管理者能平衡好组织的长远利益与短期利益</li>
+<li>操作时，目标明确，组织绩效与组织成效相匹配</li>
+</ul>
+<p>KPI是正向清单制，即“法有明文才可为”</p>
+<ul>
+<li>组织不仅指明方向，还限制管理者只能按唯一的道路去到达终点（因KPI设计者的心智模型是：指标达成了，组织目标也就实现了）<ul>
+<li>管理者成了不会思考的管理者，长久以往，必然遏制其创造力</li>
+</ul>
+</li>
+<li>管理者可能只关注组织的短期利益而牺牲长远利益</li>
+<li>操作时，关注指标，组织绩效与组织成效可能不匹配</li>
+</ul>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">以上所有主体均为管理者，而非员工，因为本人始终认为:结果绩效论更适用于<span class="keyword">*</span><span class="keyword">*</span>管理者<span class="keyword">*</span><span class="keyword">*</span>，而不适用于基层员工。</span><br></pre></td></tr></table></figure>
+<h2 id="三、OKR与MBO、KPI的关系">三、OKR与MBO、KPI的关系</h2><p>OKR是MBO与KPI结合的产物。MBO（目标管理法）与KPI（关键绩效指标，常与平衡积分卡结合使用）是两种不同的绩效管理工具。</p>
+<p>转载请注明：<br>原作者：赖韬(咨询师)<br>文章出处：<a href="http://tianyv.github.io" target="_blank" rel="external">http://tianyv.github.io</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;之前在《三种理论假设下的绩效管理》中介绍过KPI,同时网上也有KPI绩效主义毁了索尼的论述，最近又看了一编文章《为何KPI毁了索尼，而OKR成就了谷歌》，然后结合自己的理解，总结了下两者的异同。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="绩效管理" scheme="https://github.com/tianyv/tianyv.github.io/categories/%E7%BB%A9%E6%95%88%E7%AE%A1%E7%90%86/"/>
+    
+    
+      <category term="医疗行业" scheme="https://github.com/tianyv/tianyv.github.io/tags/%E5%8C%BB%E7%96%97%E8%A1%8C%E4%B8%9A/"/>
+    
+      <category term="管理咨询" scheme="https://github.com/tianyv/tianyv.github.io/tags/%E7%AE%A1%E7%90%86%E5%92%A8%E8%AF%A2/"/>
+    
+      <category term="管理基础" scheme="https://github.com/tianyv/tianyv.github.io/tags/%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="绩效管理" scheme="https://github.com/tianyv/tianyv.github.io/tags/%E7%BB%A9%E6%95%88%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>Win32::PPT模块自动化报告</title>
@@ -74,21 +128,21 @@
     <link href="https://github.com/tianyv/tianyv.github.io/2017/01/25/jxzyzd/"/>
     <id>https://github.com/tianyv/tianyv.github.io/2017/01/25/jxzyzd/</id>
     <published>2017-01-24T18:35:57.000Z</published>
-    <updated>2017-02-22T22:16:59.737Z</updated>
+    <updated>2017-07-21T07:43:44.762Z</updated>
     
     <content type="html"><![CDATA[<p>忙忙碌碌，转眼又到年底，不知什么时候开始，每到年底总喜欢回顾过往，想起这一年的咨询经历，没成想，“叩其两端而执其中”的中庸之道给了我一些感触。<br><a id="more"></a></p>
 <h2 id="一、管理，何为取其中">一、管理，何为取其中</h2><pre><code>在做管理咨询过程中，经常听到院长这么说：
 </code></pre><p>现在院长越来越难当了，究其原因，多数院长说：一方面政府要求医院要体现公益性，另一方面又要求医院自主经营，自负盈亏。<br>从“二元对立”论来看，这是两个矛盾，鱼与熊掌不能兼得，但从中国传统“一分为三”的整体认识论来看，其实关键是要找准这个<strong>中</strong>，而这个中本人认为是<strong>医生要有工作积极性，要有提升技术的动力</strong>；作为医院要有机制让医生获得提升技术的机会与途径，使得医院技术力量不断提升，医疗安全得到保障；而最终病人得到有效地救治、病痛得到缓解或减轻。这或许可以使得鱼与熊掌在某种意义上来说得以兼得。</p>
 <pre><code>院长认为医院的绩效工资水平已经不低了，但员工却仍然不满意，对提高报酬的期望很高。  
-</code></pre><p>这要分两种情况来对待，一是如果医院确实有空间，并且与周边同行相比，员工收入水平持平或略高不多，可取的做法是降低员工期望的同时，还可考虑适当提高员工的绩效工资水平。<br>二是如果医院确实已经没有增加绩效的空间了（有可能是受政策限制，又或者可能是没法拿出更多的钱难来发绩效，因为账上已没多少钱了），此时提高绩效工资水平减少期望落差的做法就不可行了，这时管理的取其中本人认为是<strong>找准中层管理员工的个性化动机</strong>，而对于<strong>普通员工则是识别他们的公共工作动机</strong>（如新入职员工可能会将培训或获得锻炼的机会做为愿意承担责任的公共工作动机），看看是否有可能满足他们，因为德鲁克认为“证据显示，对奖金感到满意未必足以形成正面的工作动机。只有当员工出于其他动机而愿意承担责任时，金钱上的奖赏才能发挥激励作用。”</p>
+</code></pre><p>这要分两种情况来对待，一是如果医院确实有空间，并且与周边同行相比，员工收入水平持平或略高不多，可取的做法是降低员工期望的同时，还可考虑适当提高员工的绩效工资水平。<br>二是如果医院确实已经没有增加绩效的空间了（有可能是受政策限制，又可能是没法拿出更多的钱来发绩效，因为账上已没多少钱了），此时提高绩效工资水平减少期望落差的做法就不可行了，这时管理的取其中本人认为是<strong>找准中层管理员工的个性化动机</strong>，而对于<strong>普通员工则是识别他们的公共工作动机</strong>（如新入职员工可能会将培训或获得锻炼的机会做为愿意承担责任的公共工作动机），看看是否有可能满足他们，因为德鲁克认为“证据显示，对奖金感到满意未必足以形成正面的工作动机。只有当员工出于其他动机而愿意承担责任时，金钱上的奖赏才能发挥激励作用。”</p>
 <h2 id="二、如何取舍，如何平衡">二、如何取舍，如何平衡</h2><pre><code>经常有院长说，我给员工多发了钱了，但为什么大家反而意见更大  
 </code></pre><p>究其原因，原来是钱发得不合理。没钱发时院长头痛，有钱了怎么发又是院长面临的另一道难题。<br>其实首先要明确能多发多少，这钱的作用是用来加大保健作用还是用来加大激励作用。<br>一是如果钱不多，而基本工资所占比重较小，那这钱可以以岗位绩效的形式发下去，主要体现员工的职称及职务，加大薪酬所起的保健作用。<br>二是如果钱多，而绩效工资所占比例不足或刚超过50%左右，并且员工积极性不高，那这钱可以加入绩效工资总量，按工作量拉开分配差距，加大薪酬所起的激励作用。<br>如果是其他情况，要不以年终奖或增设其他专项奖励的方式发下去，要不不如不发。</p>
 <pre><code>绩效改革是维持稳定好，还是破旧立新好   
-</code></pre><p>首先作为管理者需明确改革过程中不可能不产生矛盾，也不可能做到让所有的利益群体都满意。<br>其次绩效改革是利益的重新再分配，或在原来合理的基础上分配地更加公平或更有效，但均将打破现有平衡；同时绩效改革需拉开差距才能带来效率，但有了差距，就有了比较，员工又很容易产生不公平感，尤其是在信息不对称的情况下。<br>所以作为管理者要正视“希望改革获得尽可能多员工的<strong>认同</strong>”这一心理预期，更重要的是要有不怕得罪某个人或某个利益群体的思想准备，尽可能地坚持原则。关键是要识别出本次改革的撬动者是到底是谁，一切以这个群体为优先，当这个群体都还未得到满足前其他群体的利益诉求可暂放在后，有合适时机时再予以体现。</p>
+</code></pre><p>首先作为管理者需明确改革过程中不可能不产生矛盾，也不可能做到让所有的利益群体都满意。<br>其次绩效改革是利益的重新再分配，或在原来合理的基础上分配地更加公平或更有效，但均将打破现有平衡；同时绩效改革需拉开差距才能带来效率，但有了差距，就有了比较，员工又很容易产生不公平感，尤其是在信息不对称的情况下。<br>所以作为管理者要认识到“希望改革获得尽可能多员工的<strong>认同</strong>”这一心理预期本身就是不可实现的，更重要的是要有不怕得罪某个人或某个利益群体的思想准备，尽可能地坚持原则。关键是要识别出改革的撬动者到底是谁，一切以这个群体为优先，当这个群体都还未得到满足前,其他群体的利益诉求可暂放在后，有合适时机时再予以体现。</p>
 <pre><code>绩效要拉开群体差距，但差距控制在多少才合适，如何控制
 </code></pre><p>这个问题不展开说，只需明确两点：一、医生及业务中层是绩效改革是主要的撬动者；二、以临床第一，医技第二（护理群体与医技持平），行政后勤第三为原则<br>而作为科室二次分配，除了要控制好科主任与医生的差距外，还有个至关重要、需要避免出现的情况是：分配过程中不要让医生认为他们少拿是因为主任多拿了导致的，反之亦然。</p>
 <pre><code>科主任与医生的绩效分配是否要有差别，差别在哪
-</code></pre><p>医生的绩效工资要与过程指标相关，以过程激励为主；科主任的绩效要关注结果指标，体现结果导向<br>但医生以过程激励容易出现增劳不增效，出工不出力的不良现象，所以需科主任以结果导向来监督管理科室，以达到取中的平衡效果<br>如果科主任的绩效工资不与结果指标相关连，那科主任则会利用他手中的权力与资源从过程中获取更多的额外利益，给管理带来很多问题，如成本居高不下，把住手术刀，科室技术得不到提升等。</p>
+</code></pre><p>医生的绩效工资要与过程指标相关，以过程激励为主；科主任的绩效要关注结果指标，体现结果导向。但医生以过程激励容易出现增劳不增效，出工不出力的不良现象，所以需科主任以结果导向来监督管理科室，以达到取中的平衡效果。<br>如果科主任的绩效工资不与结果指标相关连，那科主任则会利用他手中的权力与资源从过程中获取更多的额外利益，给管理带来很多问题，如成本居高不下，把住手术刀，科室技术得不到提升等。</p>
 <p>转载请注明：<br>原作者：赖韬(咨询师)<br>文章出处：<a href="http://tianyv.github.io" target="_blank" rel="external">http://tianyv.github.io</a></p>
 ]]></content>
     
@@ -883,7 +937,7 @@ carton exec plackup bin/<span class="keyword">app</span>.psgi
     <link href="https://github.com/tianyv/tianyv.github.io/2015/06/26/jxjs/"/>
     <id>https://github.com/tianyv/tianyv.github.io/2015/06/26/jxjs/</id>
     <published>2015-06-26T10:09:52.000Z</published>
-    <updated>2015-11-21T20:54:58.403Z</updated>
+    <updated>2017-07-21T07:46:52.807Z</updated>
     
     <content type="html"><![CDATA[<p>刚从事绩效管理咨询时，当时的岗位是咨询助理，主要工作是协助老师的工作，做一些资料收集、数据整理分析工作，当时可能是刚从学校毕业的原因，学习的热情很高，工作之余，也在网上收集一些绩效管理的知识，当时看到了下文：<br><a id="more"></a><br><a href="http://wenku.baidu.com/view/4e3814ec551810a6f5248639.html" target="_blank" rel="external">能力导向？行为导向？还是结果导向？</a><br>现在以咨询师的视觉再回过头来看这篇文章，有感而发，根据医疗行业的特点发表一些自已的看法。</p>
 <h2 id="一、结果绩效论：">一、结果绩效论：</h2><h4 id="1-1平衡积分卡">1.1平衡积分卡</h4><p>以<strong>基于平衡积分卡的关键指标考核方法</strong>为代表，经历了以单一财务指标（资产回报、成本、销售收入、利润等）发展到基于战略导向，同时关注学习成长、内部运营、顾客满意、财务结果的统一分配模式。<br>存在以下缺陷：  </p>
@@ -891,14 +945,14 @@ carton exec plackup bin/<span class="keyword">app</span>.psgi
 <li>只关注结果，不关注过程，很可能导致结果最终受损</li>
 <li>只追求短期利益或局部利益</li>
 <li>外部环境变化战略做调整，分配指标未调整，组织丧失机遇或处于更加不利的地位</li>
-<li>如果评价指标为主观指标，为了绩效弄虚做假，或者考核部分碍于人情，不严格落实考核</li>
+<li>如果评价指标为主观指标，为了绩效弄虚做假，或者考核部门碍于人情，不严格落实考核</li>
 </ul>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">失败案例案例1： </span><br><span class="line"></span><br><span class="line">   美国安然公司，倡导的文化是赢者决定一切，诱使高级管理者在投资和会计程序方面冒很  </span><br><span class="line">大的风险，其结果就是虚报收入和隐瞒越来越多的债务，从而造成了一座用纸牌搭成的房子，  </span><br><span class="line">最后是企业的一夜间崩溃。</span><br><span class="line"></span><br><span class="line">失败案例案例2：  </span><br><span class="line">   绩效主义毁了索尼，链接如下：</span><br></pre></td></tr></table></figure>
 <p><a href="http://www.360doc.com/content/07/1005/11/46707_789570.shtml" target="_blank" rel="external">绩效主义毁了索尼 http://www.360doc.com/content/07/1005/11/46707_789570.shtml</a></p>
 <p>结果导向的绩效方法是否就不可取呢？也不尽然，关键是要知道这种理论的缺陷，通过配套机制杨其长避其短，以三星为例：<br><a href="http://baigang.baijia.baidu.com/article/18671" target="_blank" rel="external">为何绩效主义成就了三星，毁了索尼</a></p>
 <h4 id="1-2MBO目标管理法">1.2MBO目标管理法</h4><p>这是一种<strong>基于预算为基础的目标管理法</strong>。<br>存在以下缺陷：</p>
 <ul>
-<li>预算管理只能以科室为管理单元，作为员工他认为个人多劳就应多得，而不应该因其他人少劳影响了科室绩效，未能充足地体现多得。</li>
+<li>预算管理只能以科室为管理单元，作为员工他认为个人多劳就应多得，而不应该因其他人少劳影响了科室绩效，未能充足地体现本人的多得。</li>
 <li>工作量和收入预算指标设定时很难有科学合理的方法去制定，一旦再与绩效挂钩，等于是管理高层在与全体员工博弈，最终可能屈于员工集体压力，以低标准设定指标告终，这样出现更不合理的结果，少劳不少得，多劳更不多得，优势生产力得不到释放。</li>
 <li>医院业务科室的主任多为技术骨干，部分主任管理知识及经验欠缺，这也是采用目标管理很难出现效果的主要因素之一</li>
 </ul>
@@ -970,38 +1024,6 @@ carton exec plackup bin/<span class="keyword">app</span>.psgi
       <category term="Moose" scheme="https://github.com/tianyv/tianyv.github.io/tags/Moose/"/>
     
       <category term="perl" scheme="https://github.com/tianyv/tianyv.github.io/tags/perl/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Schwartzian转换</title>
-    <link href="https://github.com/tianyv/tianyv.github.io/2015/06/15/schwarzian/"/>
-    <id>https://github.com/tianyv/tianyv.github.io/2015/06/15/schwarzian/</id>
-    <published>2015-06-15T15:01:31.000Z</published>
-    <updated>2015-08-06T07:18:53.973Z</updated>
-    
-    <content type="html"><![CDATA[<p>Schwartzian：map sort map组合应用</p>
-<a id="more"></a>
-<h2 id="Schwartzian_Example">Schwartzian Example</h2><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> Modern::Perl;</span><br><span class="line"><span class="keyword">use</span> Data::Dumper;</span><br><span class="line"></span><br><span class="line"><span class="keyword">my</span> <span class="variable">@arr</span> = <span class="string">qw(a b c c 2 2)</span>;</span><br><span class="line"><span class="keyword">my</span> <span class="variable">%count</span>;</span><br><span class="line"><span class="comment">#元素第1次出现的下标</span></span><br><span class="line"><span class="keyword">my</span> <span class="variable">%hash</span> = <span class="keyword">map</span> &#123; <span class="variable">$arr</span>[<span class="variable">$_</span>], <span class="variable">$_</span> &#125; <span class="number">0</span> .. <span class="variable">$#arr</span>;</span><br><span class="line"><span class="keyword">print</span> Dumper( \<span class="variable">%hash</span> );</span><br><span class="line"><span class="comment">#Schwartzian</span></span><br><span class="line"><span class="keyword">my</span> <span class="variable">@dates</span> = <span class="string">qw(2001/1/1  2001/07/04  1999/12/25)</span>;</span><br><span class="line"><span class="keyword">my</span> <span class="variable">@sorted</span> = <span class="keyword">map</span> &#123; <span class="variable">$_</span>-&gt;[<span class="number">0</span>] &#125;</span><br><span class="line">  <span class="keyword">sort</span> &#123; <span class="variable">$a</span>-&gt;[<span class="number">1</span>] &lt;=&gt; <span class="variable">$b</span>-&gt;[<span class="number">1</span>] </span><br><span class="line">      <span class="keyword">or</span> <span class="variable">$a</span>-&gt;[<span class="number">2</span>] &lt;=&gt; <span class="variable">$b</span>-&gt;[<span class="number">2</span>] </span><br><span class="line">      <span class="keyword">or</span> <span class="variable">$a</span>-&gt;[<span class="number">3</span>] &lt;=&gt; <span class="variable">$b</span>-&gt;[<span class="number">3</span>] &#125;</span><br><span class="line"><span class="keyword">map</span> &#123; [ <span class="variable">$_</span>, ( <span class="keyword">split</span> <span class="regexp">/\//</span>, <span class="variable">$_</span> ) ] &#125; <span class="variable">@dates</span>;</span><br><span class="line"><span class="keyword">print</span> Dumper( \<span class="variable">@sorted</span> );</span><br></pre></td></tr></table></figure>
-<p><img src="/img/perl/01map.png" width="450"></p>
-<p>注：上例为本人系列教程<strong>《Perl Simple 教程》</strong>其中一页幻灯片内容。</p>
-<p>转载请注明：<br>原作者：赖韬(咨询师)<br>文章出处：<a href="http://tianyv.github.io" target="_blank" rel="external">http://tianyv.github.io</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Schwartzian：map sort map组合应用&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="perl" scheme="https://github.com/tianyv/tianyv.github.io/categories/perl/"/>
-    
-    
-      <category term="map" scheme="https://github.com/tianyv/tianyv.github.io/tags/map/"/>
-    
-      <category term="perl" scheme="https://github.com/tianyv/tianyv.github.io/tags/perl/"/>
-    
-      <category term="schwarzian" scheme="https://github.com/tianyv/tianyv.github.io/tags/schwarzian/"/>
     
   </entry>
   

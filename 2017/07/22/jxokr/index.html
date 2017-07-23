@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>R面向对象系统R6包及其继承 | LaiTao&#39;s blog</title>
+  <title>OKR与KPI异同之我见 | LaiTao&#39;s blog</title>
   <meta name="author" content="赖 韬">
   
   <meta name="description" content="管理咨询 管理顾问 绩效管理 数据分析 R perl LaTex">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="R面向对象系统R6包及其继承"/>
+  <meta property="og:title" content="OKR与KPI异同之我见"/>
   <meta property="og:site_name" content="LaiTao&#39;s blog"/>
 
   
@@ -220,22 +220,41 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2015-07-25T13:21:30.000Z"><a href="/2015/07/25/R6oop/">2015-07-25</a></time>
+        <time datetime="2017-07-22T01:11:30.000Z"><a href="/2017/07/22/jxokr/">2017-07-22</a></time>
       
       
   
-    <h1 class="title">R面向对象系统R6包及其继承</h1>
+    <h1 class="title">OKR与KPI异同之我见</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>这一章介绍R面向对象系统R6及其继承。<br><a id="more"></a></p>
-<h4 id="一、R6_Example">一、R6 Example</h4><p><strong>R6的类成员</strong>，包括<strong>属性</strong>和<strong>方法</strong>2部分</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(R6)</span><br><span class="line"><span class="comment">#定义一个R6类</span></span><br><span class="line">TimePay &lt;- R6Class(<span class="string">"TimePay"</span>,</span><br><span class="line">  public=list(</span><br><span class="line">    <span class="comment">#公有属性</span></span><br><span class="line">    name=<span class="literal">NA</span>, </span><br><span class="line">    initialize = <span class="keyword">function</span>(name,pay)&#123; </span><br><span class="line">    self$name &lt;- name</span><br><span class="line">    private$pay &lt;- pay</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">#定义公有方法</span></span><br><span class="line">    Income = <span class="keyword">function</span>()&#123; </span><br><span class="line">      print(paste(<span class="string">"你好"</span>,self$name))</span><br><span class="line">      print(paste(<span class="string">"你本月工资:"</span>,private$pay))</span><br><span class="line">    &#125;</span><br><span class="line">  ),</span><br><span class="line">  <span class="comment">#私有属性  </span></span><br><span class="line">  private=list(pay=<span class="literal">NA</span>)</span><br><span class="line">)</span><br><span class="line">tp&lt;-TimePay$new(<span class="string">"Tianyv"</span>,<span class="number">4400</span>)</span><br><span class="line">tp$Income()</span><br></pre></td></tr></table></figure>
-<p>定义公有属性及方法用<strong>public=list(属性,方法=function(){})</strong>,私有用<strong>private</strong>;<br>访问公有用：self$属性，self$方法();访问私有用：private$属性，private$方法()</p>
-<h4 id="二、R6类的继承关系">二、R6类的继承关系</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">OverTimePay &lt;- R6Class(<span class="string">"OverTimePay"</span>,</span><br><span class="line">  inherit = TimePay,</span><br><span class="line">  public=list(</span><br><span class="line">    day=<span class="literal">NA</span>, </span><br><span class="line">    getday = <span class="keyword">function</span>() self$day,</span><br><span class="line">    setday = <span class="keyword">function</span>(value) self$day &lt;- value,</span><br><span class="line">    Income = <span class="keyword">function</span>()&#123; </span><br><span class="line">    super$Income()</span><br><span class="line">    print(paste(<span class="string">"你本月加班天:"</span>,self$day))</span><br><span class="line">    overtime.pay=private$pay/<span class="number">22</span>*<span class="number">3</span>*self$day</span><br><span class="line">    print(paste(<span class="string">"加班工资:"</span>,overtime.pay))</span><br><span class="line">    &#125;</span><br><span class="line">  )</span><br><span class="line">)</span><br><span class="line">otp&lt;-OverTimePay$new(<span class="string">"Tianyv"</span>,<span class="number">4400</span>)</span><br><span class="line">otp$setday(<span class="number">3</span>)</span><br><span class="line">otp$Income()</span><br></pre></td></tr></table></figure>
-<p>继承使用<strong>inherit</strong>；调用父类方法用<strong>super$Fun()</strong></p>
+        <p>之前在《三种理论假设下的绩效管理》中介绍过KPI,同时网上也有KPI绩效主义毁了索尼的论述，最近又看了一编文章《为何KPI毁了索尼，而OKR成就了谷歌》，然后结合自己的理解，总结了下两者的异同。<br><a id="more"></a><br>附原文：<a href="http://mp.weixin.qq.com/s/uHq2FD3eJ_JaB8yHATNpEA" target="_blank" rel="external">为何KPI毁了索尼，而OKR成就了谷歌</a> </p>
+<h2 id="一、OKR与KPI本质的异同：">一、OKR与KPI本质的异同：</h2><p>同为结果绩效论，同为指标，根本的区别在于OKR是目标+关键成果，不管设计之初还是执行过程中始终聚焦关键成果；而KPI是性能（维度）+关键指标，设计之初关注各维度目标，执行过程中关注指标。</p>
+<pre><code>OKR能更成功，简单地用一句话来说就是：不记初衷，方得本心！
+</code></pre><p>正是以上的根本差异，导致操作的关注点也有极大的不同。<br>OKR由于聚焦于关键成果，方向不会发生错误，并且组织战略调整或外部环境发生变化后，提醒管理者关键成果要作出改变，如果不作调整，在绩效评价时同样能发现方向性错误；而KPI,由于操作时聚焦于指标，导致管理者花费大量时间去考核员工是否达到了指标的要求，有时指标达到了，但可能组织目标没达成，又或者组织目标已发生变更，而KPI仍指引着组织按原来的目标，在错误的路上越走越远。</p>
+<pre><code>德鲁克曾严厉警告过管理者：只要我们的经理人一天不放弃将绩效评估用于控制员工，绩效管理注定就不会成功。
+</code></pre><h2 id="二、根本的不同导致的不同行为及后果">二、根本的不同导致的不同行为及后果</h2><p>OKR是负向清单制，即“法不禁止即可为”</p>
+<ul>
+<li>组织只指明方向，并不限制管理者走哪条路去达到终点（因KPI设计者的心智模型是：结果更重要，过程中采取哪种方法不用深究）<ul>
+<li>更能调动管理者的能动性及发挥其创造力</li>
+</ul>
+</li>
+<li>让管理者能平衡好组织的长远利益与短期利益</li>
+<li>操作时，目标明确，组织绩效与组织成效相匹配</li>
+</ul>
+<p>KPI是正向清单制，即“法有明文才可为”</p>
+<ul>
+<li>组织不仅指明方向，还限制管理者只能按唯一的道路去到达终点（因KPI设计者的心智模型是：指标达成了，组织目标也就实现了）<ul>
+<li>管理者成了不会思考的管理者，长久以往，必然遏制其创造力</li>
+</ul>
+</li>
+<li>管理者可能只关注组织的短期利益而牺牲长远利益</li>
+<li>操作时，关注指标，组织绩效与组织成效可能不匹配</li>
+</ul>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">以上所有主体均为管理者，而非员工，因为本人始终认为:结果绩效论更适用于<span class="keyword">*</span><span class="keyword">*</span>管理者<span class="keyword">*</span><span class="keyword">*</span>，而不适用于基层员工。</span><br></pre></td></tr></table></figure>
+<h2 id="三、OKR与MBO、KPI的关系">三、OKR与MBO、KPI的关系</h2><p>OKR是MBO与KPI结合的产物。MBO（目标管理法）与KPI（关键绩效指标，常与平衡积分卡结合使用）是两种不同的绩效管理工具。</p>
 <p>转载请注明：<br>原作者：赖韬(咨询师)<br>文章出处：<a href="http://tianyv.github.io" target="_blank" rel="external">http://tianyv.github.io</a></p>
 
       
@@ -245,13 +264,13 @@
         
   
   <div class="categories">
-    <a href="/categories/R/">R</a>
+    <a href="/categories/绩效管理/">绩效管理</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/R/">R</a>, <a href="/tags/R6/">R6</a>, <a href="/tags/oop/">oop</a>
+    <a href="/tags/医疗行业/">医疗行业</a>, <a href="/tags/管理咨询/">管理咨询</a>, <a href="/tags/管理基础/">管理基础</a>, <a href="/tags/绩效管理/">绩效管理</a>
   </div>
 
 <!-- Baidu Button BEGIN -->
@@ -279,10 +298,8 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 
  <nav id="pagination" >
     
-    <a href="/2015/08/05/fxzctz/" class="alignleft prev" >上一页</a>
     
-    
-    <a href="/2015/07/25/mooseext/" class="alignright next" >下一页</a>
+    <a href="/2017/04/03/mooseppt/" class="alignright next" >下一页</a>
     
     <div class="clearfix"></div>
 </nav>
