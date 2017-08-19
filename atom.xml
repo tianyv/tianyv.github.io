@@ -622,7 +622,7 @@ carton exec plackup bin/<span class="keyword">app</span>.psgi
     <link href="https://github.com/tianyv/tianyv.github.io/2015/07/16/xmfb/"/>
     <id>https://github.com/tianyv/tianyv.github.io/2015/07/16/xmfb/</id>
     <published>2015-07-16T13:29:08.000Z</published>
-    <updated>2015-12-03T14:06:10.868Z</updated>
+    <updated>2017-08-19T00:47:43.095Z</updated>
     
     <content type="html"><![CDATA[<p>从2007年从事医院管理咨询，对参与并已结案的项目做了个统计。<br><a id="more"></a></p>
 <p><img src="/img/xmfb.png" width="650"></p>
@@ -638,7 +638,7 @@ carton exec plackup bin/<span class="keyword">app</span>.psgi
 <tr>
 <td style="text-align:center">1</td>
 <td style="text-align:center">绩效管理</td>
-<td style="text-align:center">34</td>
+<td style="text-align:center">42</td>
 </tr>
 <tr>
 <td style="text-align:center">2</td>
@@ -648,7 +648,7 @@ carton exec plackup bin/<span class="keyword">app</span>.psgi
 <tr>
 <td style="text-align:center"></td>
 <td style="text-align:center">合计</td>
-<td style="text-align:center">45</td>
+<td style="text-align:center">53</td>
 </tr>
 </tbody>
 </table>
